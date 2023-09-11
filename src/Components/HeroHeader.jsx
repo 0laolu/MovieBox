@@ -13,7 +13,7 @@ export default function HeroHeader() {
 
                 {/* search box */}
                 <div className="search-input-container">
-                    <input type="text"  placeholder="What do you want to watch?"/>
+                    <input type="text"  placeholder="Search movies"/>
                     <img src="../public/search-icon.png" alt="" />
                 </div>
 

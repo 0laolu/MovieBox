@@ -280,6 +280,7 @@ html {
 }
 
 .footer .terms-and-conditions p {
+  color: #111827;
   font-size: 1.1rem;
   font-weight: 700;
   padding: 2rem 0;
@@ -289,3 +290,302 @@ html {
   font-weight: 700;
   color: #6B7280;
 }
+
+@media screen and (max-width: 1120px)  {
+  .nav-bar {
+    width: 95%;
+  }
+
+  .logo-container {
+    width: auto;
+  }
+
+  .logo-container img {
+    width: 30px;
+  }
+
+  .logo-container h3 {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .search-input-container {
+    width: 50%;
+    position: relative;
+  }
+
+  .search-input-container input {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .search-input-container input::placeholder {
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  
+  /* Hero Section */
+  .hero-section {
+    background-size: cover;
+    background-position-x: -300px;
+  }
+
+  .hero-body {
+    width: 90%;
+    padding: 0.5rem 0 2rem 0;
+  }
+
+  .hero-content {
+    width: 55%;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content__rating {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 200px;
+    padding: 1.5rem 0;
+  }
+  
+  .people-ratings,
+  .tomato-rating {
+    display: flex;
+  }
+  
+  .tomato-rating {
+    margin-left: 0;
+  }
+  
+  .people-ratings p, 
+  .tomato-rating p {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  
+  .hero-content__description {
+    width: 100%;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+  }
+  
+  .hero-content__description p {
+    font-size: 0.9rem;
+  }
+
+  .trailer-btn {
+    width: 100%;
+  }
+
+  .movie-number {
+    display: none;
+  }
+
+  /* MainSection  */
+
+  .main-content-section {
+    width: 100%;
+    margin-bottom: 8rem;
+  }
+
+  .movie-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .movie-card {
+    margin-top: 5rem;
+  }
+
+  .about {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about a {
+    font-size: 0.9rem;
+  }
+
+  .about a span {
+    padding-left: 0.3rem;
+  }
+
+  .movie-title {
+    font-size: 1.1rem;
+  }
+
+  .movie-rating .tomato-rating {
+    margin-left: 2rem;
+  }
+
+  .movie-rating .people-ratings p, 
+  .movie-rating .tomato-rating p {
+    font-size: 0.85rem;
+  }
+
+  /* Footer Section */
+  .footer {
+    margin-bottom: 15rem;
+  }
+
+  .footer .social-media,
+  .footer .terms-and-conditions {
+    width: 100%;
+  }
+  
+  .footer .terms-and-conditions p {
+    font-size: 0.9rem;
+  }
+  
+  .footer .copyright p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1120px) {
+
+  .hero-section {
+    background-size: cover;
+    background-position-x: -180px;
+  }
+
+  .hero-body {
+    padding: 2rem 0 4rem 0;
+  }
+
+  /* MainSection  */
+
+  .movie-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    width: 80%;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about a {
+    font-size: 1rem;
+  }
+
+  /* Footer Section */
+  .footer {
+    margin-bottom: 5rem;
+  }
+
+
+  @media screen and (min-width: 768px) and (max-width: 1120px) {
+    .nav-bar {
+      width: 90%;
+    }
+
+    .logo-container {
+      width: 25%;
+    }
+
+    .logo-container img {
+      width: 40px;
+    }
+
+    .logo-container h3 {
+      font-size: 1.3rem;
+      margin-left: 0.5rem;
+    }
+
+    .search-input-container input {
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+    }
+
+    .search-input-container input::placeholder {
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+
+
+    /* Hero Section */
+    .hero-body {
+      width: 90%;
+      padding: 3rem 0 8rem 0;
+    }
+
+    .hero-content {
+      width: 50%;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+
+    .people-ratings p, 
+    .tomato-rating p {
+      font-size: 0.9rem;
+    }
+
+    .movie-card-container {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+    }
+
+    .about {
+      width: 95%;
+    }
+    
+    .footer .terms-and-conditions p {
+      font-size: 1.1rem;
+    }
+    
+    .footer .copyright p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1121px) and (max-width: 1590px) {
+  /* Hero section */
+  .nav-bar {
+    width: 85%;
+  }
+  .hero-body {
+    width: 85%;
+  }
+
+  .movie-number {
+    position: absolute;
+    right: -5rem;
+  }
+
+  /* MainContent Section */
+
+  .main-content-section {
+    width: 95%;
+    margin-bottom: 8rem;
+  }
+
+  .movie-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
