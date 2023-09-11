@@ -185,6 +185,7 @@ html {
 .main-content-section {
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 12rem;
 }
 
 .movie-card-container {
@@ -194,7 +195,7 @@ html {
 }
 
 .movie-card {
-  margin-top: 5rem;
+  margin-top: 7rem;
   max-width: 250px;
 }
 
@@ -216,6 +217,11 @@ html {
 
 .about a span {
   padding-left: 0.5rem;
+}
+
+.movie-card-image,
+.movie-title {
+  cursor: pointer;
 }
 
 .movie-release-date {
@@ -245,4 +251,41 @@ html {
 
 .movie-genre {
   padding-top: 0.5rem;
+}
+
+/* Footer section */
+
+.footer {
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+
+.footer .social-media,
+.footer .terms-and-conditions {
+  display: flex;
+  align-items: center;
+  width: 33%;
+  margin: 0 auto;
+}
+
+.footer .social-media {
+  max-width: 21rem;
+  justify-content: space-evenly;
+}
+
+.footer .terms-and-conditions {
+  max-width: 32rem;
+  justify-content: space-around;
+}
+
+.footer .terms-and-conditions p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+.footer .copyright p {
+  font-weight: 700;
+  color: #6B7280;
 }

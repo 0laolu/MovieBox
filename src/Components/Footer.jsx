@@ -2,11 +2,11 @@
 export default function Footer() {
     return (
         <footer className="footer">
-            <div className="social-meidia">
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
+            <div className="social-media">
+                <img src="../public/facebook-icon.png" alt="" />
+                <img src="../public/instagram-icon.png" alt="" />
+                <img src="../public/twitter-icon.png" alt="" />
+                <img src="../public/youtube-icon.png" alt="" />
             </div>
 
             <div className="terms-and-conditions">
