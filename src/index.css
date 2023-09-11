@@ -13,4 +13,168 @@ html {
   font-size: 16px;
 }
 
+.nav-bar {
+  width: 80%;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.logo-container {
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+
+.logo-container h3 {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.search-input-container {
+  width: 50%;
+  position: relative;
+}
+
+.search-input-container input {
+  background-color: transparent;
+  color: #D1D5DB;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-input-container input::placeholder {
+  color: #D1D5DB;
+}
+
+.search-input-container img {
+  width: 1.1rem;
+  position: absolute;
+  right: 1rem;
+  top: 30%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 25%;
+}
+
+.btn-container button {
+  background-color: transparent;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  padding: 1rem 0;
+  padding-right: 2rem;
+  border: none;
+}
+
+/* Hero Body */
+.hero-section {
+  background-image: url("../public/hero-bg.png");
+  background-size: cover;
+}
+
+.hero-body {
+  display: flex;
+  width: 80%;
+  padding: 5rem 0 12rem 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-content {
+  width: 30%;
+  color: white;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+}
+
+.hero-content__rating {
+  display: flex;
+  padding: 1.5rem 0;
+}
+
+.people-ratings,
+.tomato-rating {
+  display: flex;
+}
+
+.tomato-rating {
+  margin-left: 2rem;
+}
+
+.people-ratings p, 
+.tomato-rating p {
+  margin-left: 0.5rem;
+}
+
+.hero-content__description {
+  width: 80%;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.hero-content__description p {
+  font-size: 0.9rem;
+}
+
+.trailer-btn {
+  background-color: #BE123C;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  width: 50%;
+  max-width: 175px;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+}
+
+.trailer-btn-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trailer-btn-content span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.movie-number {
+  position: absolute;
+  right:-8rem;
+  top: 25%;
+  text-align: center;
+}
+
+.movie-number p {
+  color: #D1D5DB;
+  line-height: 1.5;
+}
+
+.movie-number p.three {
+  color: white;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.movie-number p span {
+  position: absolute;
+  top: -0.5rem;
+  right: 2rem;
+}

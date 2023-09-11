@@ -3,9 +3,9 @@ import HeroBody from "./HeroBody"
 
 export default function Hero() {
     return (
-        <div>
+        <section className="hero-section">
             <HeroHeader />
             <HeroBody />
-        </div>
+        </section>
     )
 }

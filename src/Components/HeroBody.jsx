@@ -8,13 +8,13 @@ export default function HeroBody() {
                 <div className="hero-content__rating">
                     <div className="people-ratings">
                         <figure className="imdb-logo">
-                            <img src="" alt="" />
+                            <img src="../public/imdb-logo.png" alt="" />
                         </figure>
                         <p>86.0 / 100</p>
                     </div>
                     <div className="tomato-rating">
                         <figure className="tomato-icon">
-                            <img src="" alt="" />
+                            <img src="../public/tomato-icon.png" alt="" />
                         </figure>
                         <p>97%</p>
                     </div>
@@ -29,21 +29,20 @@ export default function HeroBody() {
                 <div className="trailer-btn-container">
                     <button className="trailer-btn">
                         <div className="trailer-btn-content">
-                            {/* video icon */}
-                            <img src="" alt="" />
+                            <img src="../public/Play.png" alt="" />
                             <span>WATCH TRAILER</span>
                         </div>
                     </button>
                 </div>
             </div>
 
-            {/* <div className="movie-number">
+            <div className="movie-number">
                 <p>1</p>
                 <p>2</p>
-                <p>3</p>
+                <p className="three"><span><img src="../public/dash-design.png" alt="" /></span>3</p>
                 <p>4</p>
                 <p>5</p>
-            </div> */}
+            </div>
         </div>
     )
 }
