@@ -77,10 +77,11 @@ html {
   border: none;
 }
 
-/* Hero Body */
+/* Hero Section */
 .hero-section {
   background-image: url("../public/hero-bg.png");
   background-size: cover;
+  margin-bottom: 5rem;
 }
 
 .hero-body {
@@ -177,4 +178,71 @@ html {
   position: absolute;
   top: -0.5rem;
   right: 2rem;
+}
+
+/* MainContent */
+
+.main-content-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.movie-card-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.movie-card {
+  margin-top: 5rem;
+  max-width: 250px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.3rem;
+}
+
+.about a {
+  color: #BE123C;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.about a span {
+  padding-left: 0.5rem;
+}
+
+.movie-release-date {
+  padding: 0.5rem 0 1rem 0;
+}
+
+.movie-release-date p,
+.movie-genre p {
+  color: #9CA3AF;
+  font-size: 0.8rem;
+}
+
+.movie-title {
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.movie-rating {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.movie-rating .people-ratings p, 
+.movie-rating .tomato-rating p {
+  color: #111827;
+} 
+
+.movie-genre {
+  padding-top: 0.5rem;
 }
