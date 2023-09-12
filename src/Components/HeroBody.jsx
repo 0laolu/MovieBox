@@ -1,6 +1,7 @@
 import imbdLogo from "../assets/imdb-logo.png"
 import tomatoIcon from "../assets/tomato-icon.png"
 import playButton from "../assets/Play.png"
+import dashDesign from "../assets/dash-design.png"
 
 
 export default function HeroBody() {
@@ -43,7 +44,7 @@ export default function HeroBody() {
             <div className="movie-number">
                 <p>1</p>
                 <p>2</p>
-                <p className="three"><span><img src="../public/dash-design.png" alt="" /></span>3</p>
+                <p className="three"><span><img src={dashDesign} alt="" /></span>3</p>
                 <p>4</p>
                 <p>5</p>
             </div>

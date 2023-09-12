@@ -199,6 +199,11 @@ html {
   max-width: 250px;
 }
 
+.movie-card-image img {
+  width: 250px;
+}
+
+
 .about {
   display: flex;
   justify-content: space-between;

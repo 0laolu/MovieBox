@@ -1,15 +1,17 @@
+import imbdLogo from "../assets/imdb-logo.png"
+import tomatoIcon from "../assets/tomato-icon.png"
 
 export default function MovieCard(props) {
     return (
         <div className="movie-card" data-testid="movie-card">
             {/* the series and like button */}
             <figure className="movie-card-image">
-                <img src={`../public/${props.poster}`} alt="stranger-things" data-testid="movie-poster"/>
+                <img src={props.poster} alt="stranger-things" data-testid="movie-poster"/>
             </figure>
 
             {/* release date */}
             <div className="movie-release-date" data-testid="movie-release-date">
-                <p>USA, {props.releaseDate} <span>- Current</span> </p>
+                <p>USA, {props.releaseDate} </p>
             </div>
 
             {/* movie title */}
@@ -19,13 +21,13 @@ export default function MovieCard(props) {
             <div className="movie-rating">
                 <div className="people-ratings">
                     <figure className="imdb-logo">
-                        <img src="../public/imdb-logo.png" alt="" />
+                        <img src={imbdLogo} alt="" />
                     </figure>
                     <p>{props.peopleRating} / 100</p>
                 </div>
                 <div className="tomato-rating">
                     <figure className="tomato-icon">
-                        <img src="../public/tomato-icon.png" alt="" />
+                        <img src={tomatoIcon} alt="" />
                     </figure>
                     <p>{props.tomatoRating}%</p>
                 </div>
