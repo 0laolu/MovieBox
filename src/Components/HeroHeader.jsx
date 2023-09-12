@@ -1,3 +1,7 @@
+import heroLogo from "../assets/hero-logo.png"
+import menuBarIcon from "../assets/Menu.png"
+import searchIcon from "../assets/search-icon.png"
+
 
 export default function HeroHeader() {
     return (
@@ -6,7 +10,7 @@ export default function HeroHeader() {
                 {/* page logo */}
                 <div className="logo-container">
                     <figure className="logo-image">
-                        <img src="../public/hero-logo.png" alt="" />
+                        <img src={heroLogo} alt="" />
                     </figure>
                     <h3 className="logo-text">MovieBox</h3>
                 </div>
@@ -14,7 +18,7 @@ export default function HeroHeader() {
                 {/* search box */}
                 <div className="search-input-container">
                     <input type="text"  placeholder="Search movies"/>
-                    <img src="../public/search-icon.png" alt="" />
+                    <img src={searchIcon} alt="" />
                 </div>
 
                 {/* buttons */}
@@ -23,7 +27,7 @@ export default function HeroHeader() {
                         <button className="sign-in">Sign in</button>
                     </div>
                     <figure className="menu-bar">
-                        <img src="../public/Menu.png" alt="" />
+                        <img src={menuBarIcon} alt="" />
                     </figure>
                 </div>
             </nav>

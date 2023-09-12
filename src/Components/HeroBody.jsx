@@ -1,3 +1,7 @@
+import imbdLogo from "../assets/imdb-logo.png"
+import tomatoIcon from "../assets/tomato-icon.png"
+import playButton from "../assets/Play.png"
+
 
 export default function HeroBody() {
     return (
@@ -8,13 +12,13 @@ export default function HeroBody() {
                 <div className="hero-content__rating">
                     <div className="people-ratings">
                         <figure className="imdb-logo">
-                            <img src="../public/imdb-logo.png" alt="" />
+                            <img src={imbdLogo} alt="" />
                         </figure>
                         <p>86.0 / 100</p>
                     </div>
                     <div className="tomato-rating">
                         <figure className="tomato-icon">
-                            <img src="../public/tomato-icon.png" alt="" />
+                            <img src={tomatoIcon} alt="" />
                         </figure>
                         <p>97%</p>
                     </div>
@@ -29,7 +33,7 @@ export default function HeroBody() {
                 <div className="trailer-btn-container">
                     <button className="trailer-btn">
                         <div className="trailer-btn-content">
-                            <img src="../public/Play.png" alt="" />
+                            <img src={playButton} alt="" />
                             <span>WATCH TRAILER</span>
                         </div>
                     </button>

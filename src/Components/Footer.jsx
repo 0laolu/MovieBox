@@ -1,12 +1,17 @@
+import facebook from"../assets/facebook-icon.png"
+import instagram from "../assets/instagram-icon.png"
+import twitter from "../assets/twitter-icon.png"
+import youtube from "../assets/youtube-icon.png"
+
 
 export default function Footer() {
     return (
         <footer className="footer">
             <div className="social-media">
-                <img src="../public/facebook-icon.png" alt="" />
-                <img src="../public/instagram-icon.png" alt="" />
-                <img src="../public/twitter-icon.png" alt="" />
-                <img src="../public/youtube-icon.png" alt="" />
+                <img src={facebook} alt="" />
+                <img src={instagram} alt="" />
+                <img src={twitter} alt="" />
+                <img src={youtube} alt="" />
             </div>
 
             <div className="terms-and-conditions">

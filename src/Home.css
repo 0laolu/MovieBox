@@ -79,7 +79,7 @@ html {
 
 /* Hero Section */
 .hero-section {
-  background-image: url("../public/hero-bg.png");
+  background-image: url("./assets/hero-bg.png");
   background-size: cover;
   margin-bottom: 5rem;
 }
