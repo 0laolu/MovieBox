@@ -2,7 +2,7 @@ import MovieCard from "./MovieCard"
 
 import { useEffect, useState } from "react"
 
-export default function MainContent() {
+export default function MoviesList() {
 
     const [topRatedMovies, setTopRatedMovies] = useState([])
 
@@ -21,14 +21,16 @@ export default function MainContent() {
             .catch(err => console.error(err));
     }, [])
 
+
     const movieCards = topRatedMovies.map(movieData => {
-        console.log(movieData)
+        console.log(movieData.id)
         return (
             <MovieCard 
                 key = {movieData.id}
                 poster = {`https://image.tmdb.org/t/p/w185/${movieData.poster_path}`}
                 title ={movieData.title}
                 releaseDate = {movieData.release_date}
+                id={movieData.id}
             />
         )
     })
@@ -36,17 +38,11 @@ export default function MainContent() {
 
     // rendering the MainContent on the webpage
     return (
-        <section className="main-content-section">
-            <div className="about">
-                <h2 className="about-header">Featured Movie</h2>
-                <a href="https://google.com">See more <span>&gt;</span></a>
-            </div>
-            {/* displaying the returned mapped data stored in movieCards on the webpage */}
-            <div className="movie-card-container">
-                {movieCards}
-            </div>
-        </section>
+        <>
+            {movieCards}
+        </>
     )
+}
+
 
     
-}

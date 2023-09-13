@@ -1,7 +1,7 @@
-import imbdLogo from "../assets/imdb-logo.png"
-import tomatoIcon from "../assets/tomato-icon.png"
-import playButton from "../assets/Play.png"
-import dashDesign from "../assets/dash-design.png"
+import imbdLogo from "../../assets/imdb-logo.png"
+import tomatoIcon from "../../assets/tomato-icon.png"
+import playButton from "../../assets/Play.png"
+import dashDesign from "../../assets/dash-design.png"
 
 
 export default function HeroBody() {

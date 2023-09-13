@@ -1,12 +1,15 @@
-import imbdLogo from "../assets/imdb-logo.png"
-import tomatoIcon from "../assets/tomato-icon.png"
+import imbdLogo from "../../assets/imdb-logo.png"
+import tomatoIcon from "../../assets/tomato-icon.png"
+import { useNavigate } from "react-router-dom"
+
 
 export default function MovieCard(props) {
+    const navigate = useNavigate()
     return (
-        <div className="movie-card" data-testid="movie-card">
+        <div onClick={() => {navigate(`/moviepage/${props.id}`)}} className="movie-card" data-testid="movie-card">
             {/* the series and like button */}
             <figure className="movie-card-image">
-                <img src={props.poster} alt="stranger-things" data-testid="movie-poster"/>
+                <img src={props.poster} alt="" data-testid="movie-poster"/>
             </figure>
 
             {/* release date */}

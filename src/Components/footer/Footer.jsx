@@ -1,7 +1,7 @@
-import facebook from"../assets/facebook-icon.png"
-import instagram from "../assets/instagram-icon.png"
-import twitter from "../assets/twitter-icon.png"
-import youtube from "../assets/youtube-icon.png"
+import facebook from"../../assets/facebook-icon.png"
+import instagram from "../../assets/instagram-icon.png"
+import twitter from "../../assets/twitter-icon.png"
+import youtube from "../../assets/youtube-icon.png"
 
 
 export default function Footer() {

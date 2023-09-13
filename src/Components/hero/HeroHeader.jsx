@@ -1,6 +1,6 @@
-import heroLogo from "../assets/hero-logo.png"
-import menuBarIcon from "../assets/Menu.png"
-import searchIcon from "../assets/search-icon.png"
+import heroLogo from "../../assets/hero-logo.png"
+import menuBarIcon from "../../assets/Menu.png"
+import searchIcon from "../../assets/search-icon.png"
 
 
 export default function HeroHeader() {

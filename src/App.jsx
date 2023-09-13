@@ -1,11 +1,14 @@
 import { useState } from 'react'
-import Home from "./Components/Home"
+import { Routes, Route } from 'react-router-dom'
+import Home from "./pages/home/Home"
+import Movies from "./pages/movie/Movies"
 
 function App() {
     return (
-        <div>
-            <Home/>
-        </div>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/moviepage/:id' element={<Movies />} />
+        </Routes>
     )
 }
 
