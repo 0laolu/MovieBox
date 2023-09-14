@@ -3,14 +3,58 @@ import logoImage from "../../assets/hero-logo.png"
 
 export default function Sidebar() {
     return(
-        <div>
+        <div className={styles.sidebarContainer}>
             <div className="logo-container">
-                <figure className="logo-image">
+                <figure className={styles.logoImageWrapper}>
                     <img src={logoImage} alt="" />
                 </figure>
                 <h3 className={styles.logoText}>MovieBox</h3>
             </div>
-            <h1>This is the Sidebar Component</h1>
+            
+            <section className={styles.sidebarNavlinks}>
+                <ul className={styles.linkContainer}>
+                    <li>
+                        <figure className={styles.linkContentLogo}>
+                            <img src="" alt="" />
+                        </figure>
+                        <span>Home</span>
+                    </li>
+                    <li>
+                        <figure className={styles.linkContentLogo}>
+                            <img src="" alt="" />
+                        </figure>
+                        <span>Movies</span>
+                    </li>
+                    <li>
+                        <figure className={styles.linkContentLogo}>
+                            <img src="" alt="" />
+                        </figure>
+                        <span>TV Series</span>
+                    </li>
+                    <li>
+                        <figure className={styles.linkContentLogo}>
+                            <img src="" alt="" />
+                        </figure>
+                        <span>Upcoming</span>
+                    </li>
+                </ul>
+
+                <aside className={styles.quizContainer}>
+                    <div className={styles.quizDescription}>
+                        <p><span>Play movie quizzes and earn free tickets</span>50k people are playing now</p>
+                        <button className={styles.playBtn}>Start Playing</button>
+                    </div>
+                </aside>
+
+                <div className={styles.logoutContainer}>
+                    <li>
+                        <figure className={styles.linkContentLogo}>
+                            <img src="" alt="" />
+                        </figure>
+                        <span>Log out</span>
+                    </li>
+                </div>
+            </section>
         </div>
     )
 }

@@ -1,4 +1,25 @@
+.moviePageContainer {
+    display: flex;
+    position: relative;
+}
+
+.sidebarContainer {
+    border: 1px solid salmon;
+    width: 20%;
+    position: fixed;
+    min-height: 100%;
+}
 
 .logoText {
     color: black;
+    font-size: 5rem;
+}
+
+.pageBodyContainer {
+    width: 75%;
+    margin-left: 25%;
+}
+
+.sidebarNavlinks li {
+    list-style: none;
 }
