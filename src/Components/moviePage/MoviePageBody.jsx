@@ -5,7 +5,7 @@ export default function MoviePageBody(props) {
         <section className={styles.pageBodyContainer}>
             <div className={styles.pageBodyContent}>
                 <figure className={styles.movieThumbnail}>
-                    <img src={props.coverImage} alt="" />
+                    <img src={props.coverImage} alt=""/>
                 </figure>
 
                 <div className={styles.moviepageBody}>

@@ -25,14 +25,13 @@ export default function MoviePage() {
 
     const date = new Date(movieDetails.release_date)
     const dateInUTC = date.toUTCString()
-
  
     return(
         <div className={styles.moviePageContainer}>
             <Sidebar />
             <MoviePageBody
                 key = {movieDetails.id}
-                coverImage = {`https://image.tmdb.org/t/p/w185/${movieDetails.backdrop_path}`}
+                coverImage = {`https://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}`}
                 title = {movieDetails.title}
                 releaseDate = {dateInUTC}
                 runtime = {movieDetails.runtime}
