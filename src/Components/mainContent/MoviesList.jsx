@@ -16,7 +16,7 @@ export default function MoviesList() {
             }
           };
           
-          fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
+          fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
             .then(response => response.json())
             .then(data => setTopTenMovies(data.results.slice(0, 10)))
             .catch(err => console.error(err));

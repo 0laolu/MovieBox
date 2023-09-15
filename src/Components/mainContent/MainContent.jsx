@@ -9,8 +9,10 @@ export default function MainContent() {
                 <a href="https://google.com">See more <span>&gt;</span></a>
             </div>
             {/* displaying the returned mapped data stored in movieCards on the webpage */}
-            <div className="movie-card-container">
-                <MoviesList />
+            <div className="main-content-body">
+                <div className="movie-card-container">
+                    <MoviesList />
+                </div>
             </div>
         </section>
     )
