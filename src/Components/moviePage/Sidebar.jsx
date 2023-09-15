@@ -1,15 +1,18 @@
 import styles from "../../pages/movie/MoviePage.module.css"
 import logoImage from "../../assets/hero-logo.png"
+import { Link } from "react-router-dom"
 
 export default function Sidebar() {
     return(
         <div className={styles.sidebarContainer}>
-            <div className="logo-container">
-                <figure className={styles.logoImageWrapper}>
-                    <img src={logoImage} alt="" />
-                </figure>
-                <h3 className={styles.logoText}>MovieBox</h3>
-            </div>
+            <Link to="/">
+                <div className="logo-container">
+                    <figure className={styles.logoImageWrapper}>
+                        <img src={logoImage} alt="" />
+                    </figure>
+                    <h3 className={styles.logoText}>MovieBox</h3>
+                </div>
+            </Link>
             
             <section className={styles.sidebarNavlinks}>
                 <ul className={styles.linkContainer}>

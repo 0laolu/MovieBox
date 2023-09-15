@@ -21,15 +21,17 @@ export default function MoviesList() {
             .catch(err => console.error(err));
     }, [])
 
+    
 
     const movieCards = topRatedMovies.map(movieData => {
-        console.log(movieData.id)
+        const date = new Date(movieData.release_date)
+        const dateInUTC = date.toUTCString()
         return (
             <MovieCard 
                 key = {movieData.id}
                 poster = {`https://image.tmdb.org/t/p/w185/${movieData.poster_path}`}
                 title ={movieData.title}
-                releaseDate = {movieData.release_date}
+                releaseDate = {dateInUTC}
                 id={movieData.id}
             />
         )
