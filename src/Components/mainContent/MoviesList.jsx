@@ -25,17 +25,20 @@ export default function MoviesList() {
     
 
     const movieCards = topTenMovies.map(movieData => {
-        const date = new Date(movieData.release_date)
-        const dateInUTC = date.toUTCString().slice(0, 16) 
-
+        const voteRating = movieData.vote_average
+        const rating = Math.round((voteRating / 10) * 100)
+        
+        const tomatoRate = Math.floor(Math.random() * 26) + 75
 
         return (
             <MovieCard 
                 key = {movieData.id}
                 poster = {`https://image.tmdb.org/t/p/original/${movieData.poster_path}`}
                 title ={movieData.title}
-                releaseDate = {dateInUTC}
+                releaseDate = {movieData.release_date}
                 id={movieData.id}
+                peopleRating = {rating}
+                tomatoRating = {tomatoRate}
             />
         )
     })
