@@ -13,7 +13,7 @@ export default function MoviePageBody(props) {
                     <div className={styles.aboutMovie}>
                         <h3 className="movie-title" data-testid="movie-title">{props.title}</h3>
                         <h3 className="movie-release-date" data-testid="movie-release-date">{props.releaseDate}</h3>
-                        <h3 className="movie-runtime" data-testid="movie-runtime">{`${props.runtime}m`}</h3>
+                        <h3 className="movie-runtime" data-testid="movie-runtime">{`${props.runtime} minutes`}</h3>
                         <div className={styles.movieGenre}>
                         </div>
                     </div>

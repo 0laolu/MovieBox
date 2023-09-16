@@ -13,7 +13,7 @@ export default function MoviePage() {
 
     setTimeout(() => {
         setIsLoading(false)
-    }, 3500)
+    }, 3600)
 
     useEffect(() => {
         const options = {

@@ -6,7 +6,7 @@ export default function Sidebar() {
     return(
         <div className={styles.sidebarContainer}>
             <Link to="/">
-                <div className="logo-container">
+                <div className={styles.logoContainer}>
                     <figure className={styles.logoImageWrapper}>
                         <img src={logoImage} alt="" />
                     </figure>
