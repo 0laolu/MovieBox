@@ -22,7 +22,7 @@ export default function MovieCard(props) {
                 </span>
             </figure>
 
-            <div onClick={() => {navigate(`/moviepage/${props.id}`)}} className="card-body">
+            <div onClick={() => {navigate(`/movies/${props.id}`)}} className="card-body">
                 {/* release date */}
                 <div className="movie-release-date" data-testid="movie-release-date">
                     <p> {props.releaseDate} </p>

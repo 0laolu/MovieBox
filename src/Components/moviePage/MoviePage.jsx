@@ -7,7 +7,8 @@ import Loader from "../loader/Loader";
 export default function MoviePage() {
     const [movieDetails, setMovieDetails] = useState("")
     const pathName = window.location.pathname
-    const pathId = pathName.substring(11, )
+    const pathId = pathName.slice(8, )
+    console.log(pathId)
 
     const [isLoading, setIsLoading] = useState(true)
 
