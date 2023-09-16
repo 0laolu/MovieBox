@@ -26,11 +26,6 @@
     margin-left: 1.5rem;
 }
 
-.pageBodyContainer {
-    width: 75%;
-    margin-left: 25%;
-}
-
 .sidebarNavlinks li {
     list-style: none;
     padding-bottom: 3rem;
@@ -76,6 +71,11 @@
     margin: 0 auto;
 }
 
+.pageBodyContainer {
+    width: 75%;
+    margin-left: 25%;
+}
+
 .movieThumbnail {
     width: 85%;
     margin: 2rem 0;
@@ -89,6 +89,7 @@
 }
 
 .moviepageBody {
+    width: 85%;
     max-width: 1100px;
 }
 
@@ -96,4 +97,136 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+}
+
+.movieDescription {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1350px) {
+    .moviePageContainer {
+        display: block;
+    }
+
+    .sidebarContainer {
+        position: absolute;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .sidebarNavlinks {
+        display: none;
+        background-color: white;
+        z-index: -10;
+    }
+
+    .logoContainer {
+        width: 93%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+
+    .logoText {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .sidebarNavlinks {
+        text-align: center;
+    }
+
+    .sidebarNavlinks li {
+        padding-bottom: 2rem;
+    }
+
+    .linkContainer {
+       max-width: 300px;
+    }
+
+    .quizContainer {
+        max-width: 320px;
+        padding: 1rem 0;
+    }
+
+    .playBtn {
+        font-size: 0.9rem;
+        padding: 0.9rem 0;
+    }
+
+    .pageBodyContainer {
+        width: 93%;
+        margin-left: 0;
+        padding: 5rem 0;
+        margin: 0 auto;
+    }
+
+    .movieThumbnail {
+        width: 100%;
+    }
+
+    .movieThumbnail img {
+        border-radius: 10px;
+    }
+
+    .aboutMovie {
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    .movieTitle {
+        color: #343b4c;
+        font-size: 1.5rem;
+    }
+
+    .movieReleaseDate {
+        font-weight: normal;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        color: #6B7280;
+    }
+
+    .movieRuntime {
+        font-size: 1rem;
+        color: #343b4c;
+    }
+
+    .movieDescription {
+        line-height: 1.8;
+    }
+
+
+
+    /*
+
+
+
+    
+    
+    */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+
+
+    .logoText {
+        font-size: 1.3rem;
+        margin-left: 0.5rem;
+    }
+
+
+    .movieThumbnail {
+        max-width: 1000px;
+        margin: 2rem auto 0;
+    }
+
+    .moviepageBody {
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+
+    .movieDescription {
+        font-size: 1.1rem;
+    }
+  
 }
