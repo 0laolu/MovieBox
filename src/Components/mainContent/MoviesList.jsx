@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 
 export default function MoviesList() {
 
-    const [topTenMovies, setTopTenMovies] = useState([])
+    const [topRatedMovies, setTopRatedMovies] = useState([])
     useEffect(() => {
         const options = {
             method: 'GET',
@@ -18,13 +18,13 @@ export default function MoviesList() {
           
           fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
             .then(response => response.json())
-            .then(data => setTopTenMovies(data.results.slice(0, 10)))
+            .then(data => setTopRatedMovies(data.results.slice(0, 10)))
             .catch(err => console.error(err));
     }, [])
 
     
 
-    const movieCards = topTenMovies.map(movieData => {
+    const movieCards = topRatedMovies.map(movieData => {
         const voteRating = movieData.vote_average
         const rating = Math.round((voteRating / 10) * 100)
         

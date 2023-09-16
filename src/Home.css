@@ -158,30 +158,6 @@ html {
   font-weight: 700;
 }
 
-.movie-number {
-  position: absolute;
-  right:-8rem;
-  top: 25%;
-  text-align: center;
-}
-
-.movie-number p {
-  color: #D1D5DB;
-  line-height: 1.5;
-}
-
-.movie-number p.three {
-  color: white;
-  font-size: 1.8rem;
-  position: relative;
-}
-
-.movie-number p span {
-  position: absolute;
-  top: -0.5rem;
-  right: 2rem;
-}
-
 /* MainContent */
 
 .main-content-section {
@@ -405,10 +381,6 @@ html {
     width: 100%;
   }
 
-  .movie-number {
-    display: none;
-  }
-
   /* MainSection  */
 
   .main-content-section {
@@ -586,11 +558,6 @@ html {
   }
   .hero-body {
     width: 85%;
-  }
-
-  .movie-number {
-    position: absolute;
-    right: -5rem;
   }
 
   /* MainContent Section */

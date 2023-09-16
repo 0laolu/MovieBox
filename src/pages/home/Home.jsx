@@ -4,26 +4,29 @@ import Hero from "../../Components/hero/Hero"
 import MainContent from "../../Components/mainContent/MainContent"
 import Footer from "../../Components/footer/Footer"
 
-import { Rings } from  'react-loader-spinner'
+import Loader from "../../Components/loader/Loader";
 
 export default function Home() {
-    const [loading, setLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() => {
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        }, 3500)
-    }, [])
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 2500)
 
     return (
         <div className="main">
+             {
+                isLoading ? 
+                    <Loader />
+                :
 
-            <div>
-                <Hero/>
-                <MainContent />
-                <Footer />
-            </div>
+                    <div>
+                        <Hero/>
+                        <MainContent />
+                        <Footer />
+                    </div>
+             }
+            
         </div>
         
     )

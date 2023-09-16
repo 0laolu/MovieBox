@@ -5,7 +5,7 @@ export default function MainContent() {
     return (
         <section className="main-content-section">
             <div className="about">
-                <h2 className="about-header">Featured Movie</h2>
+                <h2 className="about-header">Top Rated Movies</h2>
                 <a href="https://google.com">See more <span>&gt;</span></a>
             </div>
             {/* displaying the returned mapped data stored in movieCards on the webpage */}

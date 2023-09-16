@@ -40,14 +40,6 @@ export default function HeroBody() {
                     </button>
                 </div>
             </div>
-
-            <div className="movie-number">
-                <p>1</p>
-                <p>2</p>
-                <p className="three"><span><img src={dashDesign} alt="" /></span>3</p>
-                <p>4</p>
-                <p>5</p>
-            </div>
         </div>
     )
 }
