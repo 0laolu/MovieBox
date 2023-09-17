@@ -8,7 +8,6 @@ export default function MoviePage() {
     const [movieDetails, setMovieDetails] = useState("")
     const pathName = window.location.pathname
     const pathId = pathName.slice(8, )
-    console.log(pathId)
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -33,9 +32,16 @@ export default function MoviePage() {
 
     const date = new Date(movieDetails.release_date)
     const dateInUTC = date.toUTCString()
+
+    let genre;
+    if(movieDetails !== "") {
+        let genreName = movieDetails.genres.map(obj => <p>{obj.name}</p>)
+        genre = genreName
+    }
  
     return(
         <div>
+            
             {
                 isLoading ? 
                     <Loader />
@@ -49,10 +55,10 @@ export default function MoviePage() {
                             key = {movieDetails.id}
                             coverImage = {`https://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}`}
                             title = {movieDetails.title}
-                            releaseDate = {dateInUTC}
+                            releaseDate = {dateInUTC.slice(4, 16)}
                             runtime = {movieDetails.runtime}
                             overview = {movieDetails.overview}
-                            
+                            genre = {genre}
                         />
                     </div>
             }

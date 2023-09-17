@@ -44,7 +44,8 @@ export default function Sidebar() {
 
                 <aside className={styles.quizContainer}>
                     <div className={styles.quizDescription}>
-                        <p><span>Play movie quizzes and earn free tickets</span>50k people are playing now</p>
+                        <span>Play movie quizzes and earn free tickets</span> 
+                        <p>50k people are playing now</p>
                         <button className={styles.playBtn}>Start Playing</button>
                     </div>
                 </aside>

@@ -17,15 +17,14 @@ export default function MovieCard(props) {
             <figure className="movie-card-image">
                 <img src={props.poster} alt="" data-testid="movie-poster"/>
                 <span className="favorite-btn">
-                    {/* <p className="circle-bg"></p> */}
                     <img onClick={() => setIsFavorite(prevFavorite => !prevFavorite)}  src={isFavorite ? favoriteRed : favorite} alt="" />
                 </span>
             </figure>
 
             <div onClick={() => {navigate(`/movies/${props.id}`)}} className="card-body">
                 {/* release date */}
-                <div className="movie-release-date" data-testid="movie-release-date">
-                    <p> {props.releaseDate} </p>
+                <div className="movie-release-date">
+                    <p data-testid="movie-release-date"> {props.releaseDate} </p>
                 </div>
 
                 {/* movie title */}
