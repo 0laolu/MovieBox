@@ -1,5 +1,10 @@
 import styles from "../../pages/movie/MoviePage.module.css"
 import logoImage from "../../assets/hero-logo.png"
+import homeIcon from "../../assets/Home.png"
+import movieProjectorIcon from "../../assets/movie-projector.png"
+import tvSeriesIcon from "../../assets/TV.png"
+import calendarIcon from "../../assets/Calendar.png"
+import logoutIcon from "../../assets/Logout.png"
 import { Link } from "react-router-dom"
 
 export default function Sidebar() {
@@ -18,25 +23,25 @@ export default function Sidebar() {
                 <ul className={styles.linkContainer}>
                     <li>
                         <figure className={styles.linkContentLogo}>
-                            <img src="" alt="" />
+                            <img src={homeIcon} alt="" />
                         </figure>
                         <span>Home</span>
                     </li>
                     <li>
                         <figure className={styles.linkContentLogo}>
-                            <img src="" alt="" />
+                            <img src={movieProjectorIcon} alt="" />
                         </figure>
                         <span>Movies</span>
                     </li>
                     <li>
                         <figure className={styles.linkContentLogo}>
-                            <img src="" alt="" />
+                            <img src={tvSeriesIcon} alt="" />
                         </figure>
                         <span>TV Series</span>
                     </li>
                     <li>
                         <figure className={styles.linkContentLogo}>
-                            <img src="" alt="" />
+                            <img src={calendarIcon} alt="" />
                         </figure>
                         <span>Upcoming</span>
                     </li>
@@ -53,7 +58,7 @@ export default function Sidebar() {
                 <div className={styles.logoutContainer}>
                     <li>
                         <figure className={styles.linkContentLogo}>
-                            <img src="" alt="" />
+                            <img src={logoutIcon} alt="" />
                         </figure>
                         <span>Log out</span>
                     </li>

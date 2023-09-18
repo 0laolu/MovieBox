@@ -30,13 +30,20 @@
 }
 
 .sidebarNavlinks li {
+    display: flex;
+    align-items: center;
     list-style: none;
     padding-bottom: 3rem;
+
 }
 
 .linkContainer {
     width: 90%;
     margin: 0 auto;
+}
+
+.linkContentLogo {
+    margin-right: 1rem;
 }
 
 .quizContainer {
@@ -109,18 +116,25 @@
 }
 
 .aboutMovieContainer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
 }
 
 .aboutMovie {
-    border: 1px solid black;
-    width: 100%;
+    /* border: 1px solid black; */
+    width: 80%;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+}
+
+.aboutMovie span {
+    display: inline-block;
+    position: relative;
+    top: 0.1rem;
+    font-size: 1.5rem;
 }
 
 .movieTitle {
@@ -149,6 +163,37 @@
 
 p.genre {
     border: 1px solid transparent;
+}
+
+.movieVotes {
+    /* border: 1px solid black; */
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.movieVotes img {
+    position: relative;
+    top: 0.15rem;
+    width: 25px;
+}
+
+.voteAverage {
+    color: #E8E8E8;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.movieVotes span {
+    color: #666666;
+    font-size: 1.4rem;
+}
+
+.voteCount {
+    color: #666666;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .movieDescription {
@@ -186,10 +231,6 @@ p.genre {
     .logoText {
         font-size: 1rem;
         margin-left: 0.5rem;
-    }
-
-    .sidebarContainer {
-        z-index: -10;
     }
 
     .sidebarNavlinks {
@@ -237,11 +278,18 @@ p.genre {
 
     .aboutMovieContainer {
         margin-bottom: 2rem;
-        display: block;
+        flex-wrap: wrap;
     }
 
     .aboutMovie {
         display: block;
+        width: 70%;
+        padding-bottom: 1rem;
+        min-width: 230px;
+    }
+
+    .aboutMovie span {
+        display: none;
     }
 
     .movieTitle {
@@ -258,6 +306,29 @@ p.genre {
     .movieRuntime {
         font-size: 1rem;
         color: #343b4c;
+    }
+
+    .movieVotes {
+        width: 30%;
+        min-width: 100px;
+        max-width: 125px;
+        justify-content: space-between;
+    }
+
+    .movieVotes img {
+        width: 20px;
+    }
+
+    .movieVotes img {
+        top: 0.1rem;
+    }
+
+    .voteAverage {
+        font-size: 1.2rem;
+    }
+
+    .voteCount {
+        font-size: 1rem;
     }
 
     .movieDescription {
@@ -303,6 +374,10 @@ p.genre {
         margin: 2rem auto;
     }
 
+    .aboutMovie {
+        width: 75%;
+    }
+
     .movieDescription {
         font-size: 1.1rem;
     }
@@ -315,11 +390,73 @@ p.genre {
     p.genre {
         padding: 0;
     }
+
+    .movieVotes {
+        width: 25%;
+    }
+
+    .movieVotes img {
+        width: 25px;
+    }
+
+    .movieVotes img {
+        top: 0.15rem;
+    }
+
+    .voteAverage {
+        font-size: 1.3rem;
+    }
+
+    .voteCount {
+        font-size: 1.1rem;
+    }
 }
 
-@media screen and (min-width: 1351px) and (max-width: 1550px) {
+@media screen and (min-width: 1351px) and (max-width: 1650px) {
     .logoText {
         font-size: 1.5rem;
         margin-left: 0.5rem;
+    }
+
+    p.genre {
+        margin-left: 0;
+        padding: 0;
+    } 
+
+    .aboutMovie {
+        width: 83%;
+    }
+
+    .movieTitle {
+        font-size: 1.3rem;
+    }
+    
+    .movieReleaseDate {
+        font-size: 1.1rem;
+    }
+    
+    .movieRuntime {
+        font-size: 1rem;
+    }
+
+    .movieVotes {
+        width: 12%;
+        justify-content: space-between;
+    }
+
+    .movieVotes img {
+        width: 20px;
+    }
+
+    .movieVotes img {
+        top: 0.1rem;
+    }
+
+    .voteAverage {
+        font-size: 1.2rem;
+    }
+
+    .voteCount {
+        font-size: 1rem;
     }
 }

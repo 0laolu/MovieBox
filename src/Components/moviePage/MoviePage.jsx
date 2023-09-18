@@ -34,14 +34,17 @@ export default function MoviePage() {
     const dateInUTC = date.toUTCString()
 
     let genre;
+    let averageCount = []
     if(movieDetails !== "") {
         let genreName = movieDetails.genres.map(obj => <p>{obj.name}</p>)
         genre = genreName
+
+        let movieVotes = movieDetails.vote_average
+        averageCount = movieVotes.toFixed(1)
     }
  
     return(
         <div>
-            
             {
                 isLoading ? 
                     <Loader />
@@ -59,6 +62,8 @@ export default function MoviePage() {
                             runtime = {movieDetails.runtime}
                             overview = {movieDetails.overview}
                             genre = {genre}
+                            voteAverage = {averageCount}
+                            voteCount = {movieDetails.vote_count}
                         />
                     </div>
             }
