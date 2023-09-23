@@ -1,4 +1,4 @@
-import styles from "../../pages/movie/MoviePage.module.css"
+import styles from "./MoviePage.module.css"
 import logoImage from "../../assets/hero-logo.png"
 import homeIcon from "../../assets/Home.png"
 import movieProjectorIcon from "../../assets/movie-projector.png"

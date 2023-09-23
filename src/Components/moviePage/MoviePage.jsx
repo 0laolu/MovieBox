@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import MoviePageBody from "./MoviePageBody";
-import styles from "../../pages/movie/MoviePage.module.css"
+import styles from "./MoviePage.module.css"
 import Loader from "../loader/Loader";
 
 export default function MoviePage() {

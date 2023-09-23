@@ -1,4 +1,4 @@
-import styles from "../../pages/movie/MoviePage.module.css"
+import styles from "./MoviePage.module.css"
 import starIcon from "../../assets/Star.png"
 
 export default function MoviePageBody(props) {
@@ -13,13 +13,15 @@ export default function MoviePageBody(props) {
                     {/* About movie */}
                     <div className={styles.aboutMovieContainer}>
                         <div className={styles.aboutMovie}>
-                            <h3 className={styles.movieTitle} data-testid="movie-title">{props.title}</h3>
-                            <span>•</span>
-                            <h3 className={styles.movieReleaseDate} data-testid="movie-release-date"> {props.releaseDate} </h3>
-                            <span>•</span>
-                            <h3 className={styles.movieRuntime} data-testid="movie-runtime">{`${props.runtime} mins`}</h3>
+                            <div className={styles.movieTitleContainer}>
+                                <h3 className={styles.movieTitle} data-testid="movie-title">{props.title}</h3>
+                                <span>•</span>
+                                <h3 className={styles.movieReleaseDate} data-testid="movie-release-date"> {props.releaseDate} </h3>
+                                <span>•</span>
+                                <h3 className={styles.movieRuntime} data-testid="movie-runtime">{`${props.runtime} mins`}</h3>
+                            </div>
                             <div className={styles.movieGenre}>
-                                <p className={styles.genre}>{props.genre}</p>
+                                {props.genre}
                             </div>
                         </div>
                         <div className={styles.movieVotes}>

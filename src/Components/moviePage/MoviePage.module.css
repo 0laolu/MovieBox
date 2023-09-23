@@ -111,7 +111,7 @@
 }
 
 .moviepageBody {
-    width: 85%;
+    width: 89%;
     max-width: 1100px;
 }
 
@@ -124,7 +124,7 @@
 
 .aboutMovie {
     /* border: 1px solid black; */
-    width: 80%;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,30 +133,47 @@
 .aboutMovie span {
     display: inline-block;
     position: relative;
-    top: 0.1rem;
+    /* top: 0.1rem; */
     font-size: 1.5rem;
+}
+
+.movieTitleContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .movieTitle {
     color: #343b4c;
-    font-size: 1.5rem;
+    max-width: 260px;
+    font-size: 1.4em;
 }
 
 .movieReleaseDate {
     color: #6B7280;
+    font-size: 1rem;
     font-weight: normal;
 }
 
 .movieRuntime {
     font-weight: normal;
+    font-size: 1rem;
     color: #343b4c;
+}
+
+.movieGenre {
+    width: 450px;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .movieGenre p {
     color: #B91C1C;
     border: 1px solid #F8E7EB;
     display: inline-block;
-    margin-left: 2rem;
+    margin: 0.15rem 0.3rem;
     padding: 0.3rem 1rem;
     border-radius: 20px;
 }
@@ -166,8 +183,7 @@ p.genre {
 }
 
 .movieVotes {
-    /* border: 1px solid black; */
-    width: 15%;
+    width: 18%;
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
@@ -279,6 +295,7 @@ p.genre {
     .aboutMovieContainer {
         margin-bottom: 2rem;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
 
     .aboutMovie {
@@ -292,8 +309,12 @@ p.genre {
         display: none;
     }
 
+    .movieTitleContainer {
+        display: block;
+    }
+
     .movieTitle {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .movieReleaseDate {
@@ -306,6 +327,25 @@ p.genre {
     .movieRuntime {
         font-size: 1rem;
         color: #343b4c;
+    }
+
+    .movieGenre {
+        width: 70%;
+        padding-left: 0;
+        max-width: 300px;
+        margin: 1rem 0;
+    }
+
+    .movieGenre p {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        font-size: 0.9rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    p.genre {
+        padding: 0;
     }
 
     .movieVotes {
@@ -333,25 +373,10 @@ p.genre {
 
     .movieDescription {
         line-height: 1.8;
+        font-size: 1rem;
     }
 
-    .movieGenre {
-        width: 70%;
-        max-width: 300px;
-        margin-top: 1rem;
-    }
 
-    .movieGenre p {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 0;
-        font-size: 0.9rem;
-        padding: 0.3rem 0.7rem;
-    }
-
-    p.genre {
-        padding: 0;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1350px) {
@@ -378,8 +403,8 @@ p.genre {
         width: 75%;
     }
 
-    .movieDescription {
-        font-size: 1.1rem;
+    .movieTitle {
+        font-size: 1.5rem;
     }
 
     .movieGenre p {
@@ -410,6 +435,10 @@ p.genre {
     .voteCount {
         font-size: 1.1rem;
     }
+
+    .movieDescription {
+        font-size: 1.1rem;
+    }
 }
 
 @media screen and (min-width: 1351px) and (max-width: 1650px) {
@@ -424,19 +453,32 @@ p.genre {
     } 
 
     .aboutMovie {
-        width: 83%;
+        width: 85%;
+    }
+
+    .movieTitleContainer {
+        width: 60%;
     }
 
     .movieTitle {
         font-size: 1.3rem;
+        max-width: 170px;
     }
     
     .movieReleaseDate {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .movieRuntime {
         font-size: 1rem;
+    }
+
+    .movieGenre {
+        padding-left: 1rem;
+    }
+
+    .movieGenre p {
+        margin: 0.15rem;
     }
 
     .movieVotes {
