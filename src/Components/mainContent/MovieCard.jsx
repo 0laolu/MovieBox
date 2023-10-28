@@ -48,7 +48,7 @@ export default function MovieCard(props) {
 
                 {/* movie genre */}
                 <div className="movie-genre">
-                    <p>{props.genre}</p>
+                    <p>action, drama, thriller</p>
                 </div>
             </div>
 

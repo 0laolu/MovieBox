@@ -219,6 +219,8 @@ html {
 
 .card-body {
   cursor: pointer;
+  height: 155px;
+  position: relative;
 }
 
 .movie-release-date {
@@ -238,7 +240,9 @@ html {
 
 .movie-rating {
   display: flex;
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
+  position: absolute;
+  bottom: 0.8rem;
 }
 
 .movie-rating .people-ratings p, 
@@ -247,7 +251,8 @@ html {
 } 
 
 .movie-genre {
-  padding-top: 0.5rem;
+  position: absolute;
+  bottom: 0;
 }
 
 /* Footer section */
