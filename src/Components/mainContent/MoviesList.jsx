@@ -1,5 +1,4 @@
 import MovieCard from "./MovieCard"
-
 import { useEffect, useState } from "react"
 
 
@@ -50,8 +49,18 @@ export default function MoviesList() {
     console.log(objGenreId)
 
     const movieCards = trendingMovies.map(movieData => {
-        let movieGenreId = movieData.genre_ids
+        let movieGenreId = movieData.genre_ids.join(" ").split(" ").slice(0, 3)
         console.log(movieGenreId)
+
+        const genre = movieGenreId.map(movieGenre => {
+            if(objGenreId.includes(movieGenre)) {
+                return (
+                    <p>{genreNames[movieGenre]}</p>
+                )
+            } 
+        })
+
+        console.log(genre)
         
         const voteRating = movieData.vote_average
         const rating = Math.round((voteRating / 10) * 100)
@@ -67,6 +76,7 @@ export default function MoviesList() {
                 id={movieData.id}
                 peopleRating = {rating}
                 tomatoRating = {tomatoRate}
+                genre = {genre}
             />
         )
     })
