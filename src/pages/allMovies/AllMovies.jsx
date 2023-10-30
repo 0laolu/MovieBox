@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Loader from "../../Components/loader/Loader"
+import AllMoviesData from "../../Components/allMovies/AllMoviesData"
+import styles from "../../Components/allMovies/AllMovies.module.css"
 
 export default function AllMovies() {
 
@@ -15,9 +17,11 @@ export default function AllMovies() {
                 isLoading ? 
                     <Loader />
                 :
-                    <div>
-                        this is the all movies page
-                    </div>
+                    <section className={styles.moviesContentSection}>
+                        <div className={styles.movieCardContainer}>
+                            <AllMoviesData/>
+                        </div>
+                    </section>
             }
         </>
     )
