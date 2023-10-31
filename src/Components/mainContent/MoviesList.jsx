@@ -46,11 +46,9 @@ export default function MoviesList() {
     }
     
     const objGenreId = Object.keys(genreNames)
-    console.log(objGenreId)
 
     const movieCards = trendingMovies.map(movieData => {
         let movieGenreId = movieData.genre_ids.join(" ").split(" ").slice(0, 3)
-        console.log(movieGenreId)
 
         const genre = movieGenreId.map(movieGenre => {
             if(objGenreId.includes(movieGenre)) {
@@ -59,8 +57,6 @@ export default function MoviesList() {
                 )
             } 
         })
-
-        console.log(genre)
         
         const voteRating = movieData.vote_average
         const rating = Math.round((voteRating / 10) * 100)

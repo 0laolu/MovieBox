@@ -15,20 +15,20 @@ export default function MovieCard(props) {
         <div className="movie-card" data-testid="movie-card">
             {/* the series and like button */}
             <figure className="movie-card-image">
-                <img src={props.poster} alt="" data-testid="movie-poster"/>
+                <img onClick={() => {navigate(`/movies/${props.id}`)}} src={props.poster} alt="" data-testid="movie-poster"/>
                 <span className="favorite-btn">
                     <img onClick={() => setIsFavorite(prevFavorite => !prevFavorite)}  src={isFavorite ? favoriteRed : favorite} alt="" />
                 </span>
             </figure>
 
-            <div onClick={() => {navigate(`/movies/${props.id}`)}} className="card-body">
+            <div className="card-body">
                 {/* release date */}
                 <div className="movie-release-date">
                     <p data-testid="movie-release-date"> {props.releaseDate} </p>
                 </div>
 
                 {/* movie title */}
-                <h3 className="movie-title" data-testid="movie-title">{props.title}</h3>
+                <h3 onClick={() => {navigate(`/movies/${props.id}`)}} className="movie-title" data-testid="movie-title">{props.title}</h3>
 
                 {/* movie rating */}
                 <div className="movie-rating">

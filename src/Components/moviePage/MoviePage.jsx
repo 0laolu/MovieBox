@@ -28,6 +28,7 @@ export default function MoviePage() {
             .then(response => response.json())
             .then(data => setMovieDetails(data))
             .catch(err => console.error(err));
+        
     }, [])
 
     const date = new Date(movieDetails.release_date)

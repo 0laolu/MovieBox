@@ -202,6 +202,10 @@ html {
   position: relative;
 }
 
+.movie-card-image img {
+  cursor: pointer;
+}
+
 .favorite-btn {
   position: absolute;
   top: 1rem;
@@ -219,7 +223,6 @@ html {
 }
 
 .card-body {
-  cursor: pointer;
   height: 145px;
   position: relative;
 }
@@ -237,6 +240,7 @@ html {
 .movie-title {
   color: #111827;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .movie-rating {
