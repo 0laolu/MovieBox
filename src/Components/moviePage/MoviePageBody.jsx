@@ -1,12 +1,20 @@
+// import Youtube from react-youtube
 import styles from "./MoviePage.module.css"
 import starIcon from "../../assets/Star.png"
 
 export default function MoviePageBody(props) {
+    const pathName = window.location.pathname
+    const pathId = pathName.slice(8, )
+
     return(
         <section className={styles.pageBodyContainer}>
             <div className={styles.pageBodyContent}>
                 <figure className={styles.movieThumbnail}>
-                    <img src={props.coverImage} alt=""/>
+                    {/* <a href={`https://www.youtube.com/embed/${props.id}`} rel="noreferrer"> */}
+                        <img src={props.coverImage} alt=""/>
+                    {/* </a> */}
+                    
+                    
                 </figure>
 
                 <div className={styles.moviepageBody}>

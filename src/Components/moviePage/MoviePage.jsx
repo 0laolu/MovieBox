@@ -8,6 +8,7 @@ export default function MoviePage() {
     const [movieDetails, setMovieDetails] = useState("")
     const pathName = window.location.pathname
     const pathId = pathName.slice(8, )
+    const [selectedMovie, setSelectedMovie] = useState("")
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -24,12 +25,14 @@ export default function MoviePage() {
             }
           };
           
-          fetch(`https://api.themoviedb.org/3/movie/${pathId}?language=en-US`, options)
+          fetch(`https://api.themoviedb.org/3/movie/${pathId}?&append_to_response=videos`, options)
             .then(response => response.json())
-            .then(data => setMovieDetails(data))
+            .then(data => {setMovieDetails(data); console.log(data)})
             .catch(err => console.error(err));
         
     }, [])
+
+    console.log(movieDetails.videos)
 
     const date = new Date(movieDetails.release_date)
     const dateInUTC = date.toUTCString()
