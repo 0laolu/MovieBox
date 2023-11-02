@@ -8,7 +8,7 @@ export default function MoviePage() {
     const [movieDetails, setMovieDetails] = useState("")
     const pathName = window.location.pathname
     const pathId = pathName.slice(8, )
-    const [selectedMovie, setSelectedMovie] = useState("")
+    const [trailerKey, setTrailerKey] = useState(null)
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -32,7 +32,14 @@ export default function MoviePage() {
         
     }, [])
 
-    console.log(movieDetails.videos)
+    // let trailerUrl;
+    if(movieDetails !== "") {
+        const trailer = movieDetails.videos.results.find(video => video.type === "Trailer" && video.site === "YouTube")
+        // const trailerUrl = movieDetails.videos.results.find(video => {
+        //     video.type === "Trailer" && video.site === "YouTube"
+        // })
+        // console.log(trailerUrl)
+    }
 
     const date = new Date(movieDetails.release_date)
     const dateInUTC = date.toUTCString()
@@ -68,6 +75,7 @@ export default function MoviePage() {
                             genre = {genre}
                             voteAverage = {averageCount}
                             voteCount = {movieDetails.vote_count}
+                            // trailer = {trailerUrl}
                         />
                     </div>
             }

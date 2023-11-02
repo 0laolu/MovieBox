@@ -172,7 +172,7 @@ html {
   align-items: center;
 }
 
-.about h2 {
+.about-header {
   font-size: 2.3rem;
 }
 
@@ -187,23 +187,30 @@ html {
   padding-left: 0.5rem;
 }
 
-.movie-card-container {
+.movie-card-container, 
+.series-card-container {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 8rem;
 }
 
-.movie-card {
+
+.movie-card,
+.series-card {
   margin-top: 7rem;
   max-width: 250px;
 }
 
-.movie-card-image {
+.movie-card-image,
+.series-card-image {
   position: relative;
 }
 
-.movie-card-image img {
+.movie-card-image img,
+.series-card-image img {
   cursor: pointer;
+  width: 250px;
 }
 
 .favorite-btn {
@@ -218,32 +225,33 @@ html {
   max-width: 30px;
 }
 
-.movie-card-image img {
-  width: 250px;
-}
-
 .card-body {
   height: 145px;
   position: relative;
 }
 
-.movie-release-date {
+.movie-release-date,
+.series-release-date {
   padding: 0.5rem 0;
 }
 
 .movie-release-date p,
-.movie-genre p {
+.series-release-date p,
+.movie-genre p,
+.series-genre p {
   color: #9CA3AF;
   font-size: 0.8rem;
 }
 
-.movie-title {
+.movie-title,
+.series-title {
   color: #111827;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
-.movie-rating {
+.movie-rating,
+.series-rating {
   display: flex;
   padding: 0.8rem 0;
   position: absolute;
@@ -251,17 +259,21 @@ html {
 }
 
 .movie-rating .people-ratings p, 
-.movie-rating .tomato-rating p {
+.series-rating .people-ratings p,
+.movie-rating .tomato-rating p,
+.series-rating .tomato-rating p {
   color: #111827;
 } 
 
-.movie-genre {
+.movie-genre,
+.series-genre {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.movie-genre p {
+.movie-genre p,
+.series-genre p {
   display: inline-block;
   margin-right: 0.5rem;
 }
@@ -404,11 +416,13 @@ html {
     margin-bottom: 8rem;
   }
 
-  .movie-card-container {
+  .movie-card-container,
+  .series-card-container {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .movie-card {
+  .movie-card,
+  .series-card {
     margin-top: 5rem;
   }
 
@@ -417,7 +431,7 @@ html {
     margin: 0 auto;
   }
 
-  .about h2 {
+  .about-header {
     font-size: 1.5rem;
   }
 
@@ -429,16 +443,20 @@ html {
     padding-left: 0.3rem;
   }
 
-  .movie-title {
+  .movie-title,
+  .series-title {
     font-size: 1.1rem;
   }
 
-  .movie-rating .tomato-rating {
+  .movie-rating .tomato-rating,
+  .series-rating .tomato-rating {
     margin-left: 2rem;
   }
 
-  .movie-rating .people-ratings p, 
-  .movie-rating .tomato-rating p {
+  .movie-rating .people-ratings p,
+  .series-rating .people-ratings p, 
+  .movie-rating .tomato-rating p,
+  .series-rating .tomato-rating p {
     font-size: 0.85rem;
   }
 
@@ -474,7 +492,8 @@ html {
 
   /* MainSection  */
 
-  .movie-card-container {
+  .movie-card-container,
+  .series-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -482,7 +501,7 @@ html {
     width: 80%;
   }
 
-  .about h2 {
+  .about-header {
     font-size: 1.8rem;
   }
 
@@ -548,7 +567,8 @@ html {
       font-size: 0.9rem;
     }
 
-    .movie-card-container {
+    .movie-card-container,
+    .series-card-container {
       grid-template-columns: repeat(3, 1fr);
       justify-content: center;
     }
@@ -583,7 +603,8 @@ html {
     margin-bottom: 8rem;
   }
 
-  .movie-card-container {
+  .movie-card-container,
+  .series-card-container {
     grid-template-columns: repeat(4, 1fr);
   }
 

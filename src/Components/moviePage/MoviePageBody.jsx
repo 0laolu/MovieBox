@@ -10,7 +10,7 @@ export default function MoviePageBody(props) {
         <section className={styles.pageBodyContainer}>
             <div className={styles.pageBodyContent}>
                 <figure className={styles.movieThumbnail}>
-                    {/* <a href={`https://www.youtube.com/embed/${props.id}`} rel="noreferrer"> */}
+                    {/* <a href={`https://www.youtube.com/embed/${prop}`} rel="noreferrer"> */}
                         <img src={props.coverImage} alt=""/>
                     {/* </a> */}
                     
