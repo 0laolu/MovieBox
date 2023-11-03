@@ -56,7 +56,7 @@ export default function SeriesList() {
     const objGenreId = Object.keys(genreNames)
 
     const seriesCards = trendingMovies.map(seriesData => {
-        console.log(seriesData)
+        // console.log(seriesData.id)
         let seriesGenreId = seriesData.genre_ids.join(" ").split(" ").slice(0, 2)
 
         const genre = seriesGenreId.map(seriesGenre => {

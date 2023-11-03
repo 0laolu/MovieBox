@@ -15,7 +15,7 @@ export default function SeriesCard(props) {
         <div className="series-card" data-testid="series-card">
             {/* the series and like button */}
             <figure className="series-card-image">
-                <img onClick={() => {navigate(`/movies/${props.id}`)}} src={props.poster} alt="" data-testid="series-poster"/>
+                <img onClick={() => {navigate(`/tv-series/${props.id}`)}} src={props.poster} alt="" data-testid="series-poster"/>
                 <span className="favorite-btn">
                     <img onClick={() => setIsFavorite(prevFavorite => !prevFavorite)}  src={isFavorite ? favoriteRed : favorite} alt="" />
                 </span>
@@ -28,7 +28,7 @@ export default function SeriesCard(props) {
                 </div>
 
                 {/* movie title */}
-                <h3 onClick={() => {navigate(`/movies/${props.id}`)}} className="series-title" data-testid="series-title">{props.title}</h3>
+                <h3 onClick={() => {navigate(`/tv-series/${props.id}`)}} className="series-title" data-testid="series-title">{props.title}</h3>
 
                 {/* movie rating */}
                 <div className="series-rating">
