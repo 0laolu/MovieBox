@@ -1,4 +1,4 @@
-import SeriesPage from "../../Components/seriesPage/seriesPage";
+import SeriesPage from "../../Components/seriesPage/SeriesPage"
 
 export default function Series() {
     return (
