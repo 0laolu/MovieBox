@@ -8,7 +8,7 @@ export default function MoviePage() {
     const [movieDetails, setMovieDetails] = useState("")
     const pathName = window.location.pathname
     const pathId = pathName.slice(8, )
-    const [trailerKey, setTrailerKey] = useState(null)
+    const [trailerUrl, setTrailerUrl] = useState("")
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -32,14 +32,22 @@ export default function MoviePage() {
         
     }, [])
 
+    // const trailer = movieDetails.videos.results.find(video => video.type === "Trailer" && video.site === "YouTube")
     // let trailerUrl;
-    if(movieDetails !== "") {
-        const trailer = movieDetails.videos.results.find(video => video.type === "Trailer" && video.site === "YouTube")
-        // const trailerUrl = movieDetails.videos.results.find(video => {
-        //     video.type === "Trailer" && video.site === "YouTube"
-        // })
-        // console.log(trailerUrl)
-    }
+    useEffect(() => {
+        // Use the effect to find and set the trailer URL
+        if (movieDetails !== "") {
+          const trailer = movieDetails.videos.results.find(video => {
+            return video.type === "Trailer" && video.site === "YouTube";
+          });
+    
+          if (trailer) {
+            setTrailerUrl(trailer.key);
+          }
+        }
+      }, [movieDetails]);
+
+    console.log(trailerUrl)
 
     const date = new Date(movieDetails.release_date)
     const dateInUTC = date.toUTCString()
@@ -75,8 +83,18 @@ export default function MoviePage() {
                             genre = {genre}
                             voteAverage = {averageCount}
                             voteCount = {movieDetails.vote_count}
-                            // trailer = {trailerUrl}
+                            trailer = {trailerUrl}
                         />
+
+                        {/* {trailerUrl && (
+                            <iframe
+                            width="560"
+                            height="315"
+                            src={`https://www.youtube.com/embed/${trailerUrl}`}
+                            title="Trailer"
+                            allowFullScreen
+                            ></iframe>
+                        )} */}
                     </div>
             }
         </div>
