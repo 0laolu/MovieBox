@@ -1,7 +1,7 @@
 # MovieBox 
 
 ## Objective
-> To create a movie discovery web application that allows users to search for movies, view details about them, and save their favourite movies while consuming data from the TMDB API.
+> To create a movie discovery web application that allows users to search for movies/ tv-shows, view details about them, watch movie trailer and save their favourite movies while consuming data from the TMDB API.
 
 ## Features
 #### 1. User Interface
@@ -24,6 +24,9 @@ they should see the following:
 - release date (in UTC) - `data-testid= "movie-release-date"`
 - runtime (in minutes) - `data-testid= "movie-runtime"`
 - overview - `data-testid= "movie-overview"`
+
+#### 4. Movie Trailer:
+Users should be able to watch video trailer of the selected movie/ tv show 
 <br />
 
 ## API Integration:
@@ -32,7 +35,7 @@ Consume the TMDB API to fetch movie data.
 Fetch movie details by ID `https://api.themoviedb.org/3/movie/{movie_id}`
 
 ## Tools Used
- **Client:** React, React-router 
+ **Client:** React, React-router, React-Player 
 
  **API:** TMDB API
 
