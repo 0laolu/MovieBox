@@ -1,23 +1,18 @@
 // import Youtube from react-youtube
-import { Link } from "react-router-dom"
 import styles from "./MoviePage.module.css"
 import starIcon from "../../assets/Star.png"
 
-
 export default function MoviePageBody(props) {
+    const pathName = window.location.pathname
+    const pathId = pathName.slice(8, )
 
     return(
         <section className={styles.pageBodyContainer}>
             <div className={styles.pageBodyContent}>
                 <figure className={styles.movieThumbnail}>
-                    {/* <Link to={`https://www.youtube.com/embed/${props.trailer}`} rel="noreferrer"> */}
-                        <img  
-                            src={props.coverImage} 
-                            alt=""
-                            onClick={() => window.location.href = `https://www.youtube.com/embed/${props.trailer}`}
-                            onTouchStart={() => window.location.href = `https://www.youtube.com/embed/${props.trailer}`}
-                        />
-                    {/* </Link> */}
+                    {/* <a href={`https://www.youtube.com/embed/${props.trailer}`} rel="noreferrer"> */}
+                        <img src={props.coverImage} alt=""/>
+                    {/* </a> */}
                     
                     
                 </figure>
