@@ -1,4 +1,5 @@
 // import Youtube from react-youtube
+import ReactPlayer from "react-player"
 import styles from "./MoviePage.module.css"
 import starIcon from "../../assets/Star.png"
 
@@ -11,7 +12,18 @@ export default function MoviePageBody(props) {
             <div className={styles.pageBodyContent}>
                 <figure className={styles.movieThumbnail}>
                     {/* <a href={`https://www.youtube.com/embed/${props.trailer}`} rel="noreferrer"> */}
-                        <img src={props.coverImage} alt=""/>
+                        {/* <img src={props.coverImage} alt=""/> */}
+                        <ReactPlayer
+                            url={`https://www.youtube.com/watch?v=${props.trailer}`}
+                            width="100%"
+                            height="auto"
+                            controls
+                            config={{ youtube: { playerVars: { modestbranding: 1 } } }}
+                            onClick={() => window.location.href = `https://www.youtube.com/embed/${props.trailer}`}
+                            onTouchStart={() => window.location.href = `https://www.youtube.com/embed/${props.trailer}`}
+                            onKeyPress={() => window.location.href = `https://www.youtube.com/embed/${props.trailer}`}
+                            className={styles.moviePlayer}
+                        />
                     {/* </a> */}
                     
                     

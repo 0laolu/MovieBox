@@ -10,14 +10,14 @@ import { Link } from "react-router-dom"
 export default function Sidebar() {
     return(
         <div className={styles.sidebarContainer}>
-            <Link to="/">
+            {/* <Link to="/">
                 <div className={styles.logoContainer}>
                     <figure className={styles.logoImageWrapper}>
                         <img src={logoImage} alt="" />
                     </figure>
                     <h3 className={styles.logoText}>MovieBox</h3>
                 </div>
-            </Link>
+            </Link> */}
             
             <section className={styles.sidebarNavlinks}>
                 <ul className={styles.linkContainer}>

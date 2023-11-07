@@ -84,7 +84,7 @@ export default function MoviePage() {
                             genre = {genre}
                             voteAverage = {averageCount}
                             voteCount = {movieDetails.vote_count}
-                            // trailer = {trailerUrl}
+                            trailer = {trailerUrl}
                         />
 
                         {/* {trailerUrl && (
@@ -97,12 +97,7 @@ export default function MoviePage() {
                             ></iframe>
                         )} */}
 
-                        <ReactPlayer
-                            url={`https://www.youtube.com/watch?v=${trailerUrl}`}
-                            width="100%"
-                            height="auto"
-                            controls
-                        />
+                        
                     </div>
             }
         </div>

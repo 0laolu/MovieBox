@@ -13,6 +13,7 @@
     min-height: 100%;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    z-index: -10;
 }
 
 .logoContainer {
@@ -20,13 +21,19 @@
     align-items: center;
     width: 15%;
     padding: 2rem 1rem;
-
+    position: absolute;
+    z-index: 100;
 }
 
 .logoText {
     color: black;
     font-size: 1.5rem;
     margin-left: 1.5rem;
+}
+
+.sidebarNavlinks {
+    /* border: 1px solid red; */
+    margin-top: 10rem;
 }
 
 .sidebarNavlinks li {
@@ -237,15 +244,15 @@ p.genre {
     }
 
     .sidebarNavlinks {
+        
         display: none;
         background-color: white;
         z-index: -10;
     }
 
     .logoContainer {
-        width: 93%;
-        max-width: 1000px;
-        margin: 0 auto;
+        width: 90%;
+        left: 1rem;
         padding: 1rem 0;
     }
 
@@ -403,6 +410,7 @@ p.genre {
         max-width: 1000px;
         margin: 2rem auto;
     }
+    
 
     .aboutMovie {
         width: 75%;
