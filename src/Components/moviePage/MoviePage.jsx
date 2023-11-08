@@ -3,7 +3,6 @@ import ReactPlayer from 'react-player'
 import Sidebar from "./Sidebar";
 import MoviePageBody from "./MoviePageBody";
 import styles from "./MoviePage.module.css"
-import Loader from "../loader/Loader";
 
 export default function MoviePage() {
     const [movieDetails, setMovieDetails] = useState("")
@@ -11,11 +10,6 @@ export default function MoviePage() {
     const pathId = pathName.slice(8, )
     const [trailerUrl, setTrailerUrl] = useState("")
 
-    const [isLoading, setIsLoading] = useState(true)
-
-    setTimeout(() => {
-        setIsLoading(false)
-    }, 3600)
 
     useEffect(() => {
         const options = {
@@ -33,8 +27,6 @@ export default function MoviePage() {
         
     }, [])
 
-    // const trailer = movieDetails.videos.results.find(video => video.type === "Trailer" && video.site === "YouTube")
-    // let trailerUrl;
     useEffect(() => {
         // Use the effect to find and set the trailer URL
         if (movieDetails !== "") {
@@ -64,42 +56,32 @@ export default function MoviePage() {
     }
  
     return(
-        <div>
-            {
-                isLoading ? 
-                    <Loader />
-                
-                :
+        <div className={styles.moviePageContainer}>
+            <Sidebar />
+            <MoviePageBody
+                key = {movieDetails.id}
+                coverImage = {`https://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}`}
+                title = {movieDetails.title}
+                releaseDate = {dateInUTC.slice(4, 16)}
+                runtime = {movieDetails.runtime}
+                overview = {movieDetails.overview}
+                genre = {genre}
+                voteAverage = {averageCount}
+                voteCount = {movieDetails.vote_count}
+                trailer = {trailerUrl}
+            />
 
+            {/* {trailerUrl && (
+                <iframe
+                width="100%"
+                height="auto"
+                src={`https://www.youtube.com/embed/${trailerUrl}?rel=0&showinfo=0`}
+                title="Trailer"
+                allowFullScreen
+                ></iframe>
+            )} */}
 
-                    <div className={styles.moviePageContainer}>
-                        <Sidebar />
-                        <MoviePageBody
-                            key = {movieDetails.id}
-                            coverImage = {`https://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}`}
-                            title = {movieDetails.title}
-                            releaseDate = {dateInUTC.slice(4, 16)}
-                            runtime = {movieDetails.runtime}
-                            overview = {movieDetails.overview}
-                            genre = {genre}
-                            voteAverage = {averageCount}
-                            voteCount = {movieDetails.vote_count}
-                            trailer = {trailerUrl}
-                        />
-
-                        {/* {trailerUrl && (
-                            <iframe
-                            width="100%"
-                            height="auto"
-                            src={`https://www.youtube.com/embed/${trailerUrl}?rel=0&showinfo=0`}
-                            title="Trailer"
-                            allowFullScreen
-                            ></iframe>
-                        )} */}
-
-                        
-                    </div>
-            }
+            
         </div>
     )
 }

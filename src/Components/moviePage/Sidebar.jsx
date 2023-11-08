@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom"
 import styles from "./MoviePage.module.css"
 import logoImage from "../../assets/hero-logo.png"
 import homeIcon from "../../assets/Home.png"
@@ -5,9 +6,10 @@ import movieProjectorIcon from "../../assets/movie-projector.png"
 import tvSeriesIcon from "../../assets/TV.png"
 import calendarIcon from "../../assets/Calendar.png"
 import logoutIcon from "../../assets/Logout.png"
-import { Link } from "react-router-dom"
+
 
 export default function Sidebar() {
+    const navigate = useNavigate()
     return(
         <div className={styles.sidebarContainer}>
             {/* <Link to="/">
@@ -21,13 +23,13 @@ export default function Sidebar() {
             
             <section className={styles.sidebarNavlinks}>
                 <ul className={styles.linkContainer}>
-                    <li>
+                    <li onClick={()=> navigate(`/`)}>
                         <figure className={styles.linkContentLogo}>
                             <img src={homeIcon} alt="" />
                         </figure>
                         <span>Home</span>
                     </li>
-                    <li>
+                    <li onClick={()=> navigate(`/all-movies`)}> 
                         <figure className={styles.linkContentLogo}>
                             <img src={movieProjectorIcon} alt="" />
                         </figure>
