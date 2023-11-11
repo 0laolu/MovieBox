@@ -11,11 +11,11 @@ export default function SeriesPage() {
     const [trailerUrl, setTrailerUrl] = useState("")
     
 
-    const [isLoading, setIsLoading] = useState(true)
+    // const [isLoading, setIsLoading] = useState(true)
 
-    setTimeout(() => {
-        setIsLoading(false)
-    }, 3600)
+    // setTimeout(() => {
+    //     setIsLoading(false)
+    // }, 3600)
 
     useEffect(() => {
 
@@ -63,30 +63,20 @@ export default function SeriesPage() {
     }
  
     return(
-        <div>
-            {
-                isLoading ? 
-                    <Loader />
-                
-                :
-
-
-                    <div className={styles.seriesPageContainer}>
-                        <Sidebar />
-                        <SeriesPageBody
-                            key = {seriesDetails.id}
-                            coverImage = {`https://image.tmdb.org/t/p/original/${seriesDetails.backdrop_path}`}
-                            title = {seriesDetails.name}
-                            releaseDate = {seriesDetails.first_air_date}
-                            runtime = {seriesDetails.episode_run_time}
-                            overview = {seriesDetails.overview}
-                            genre = {genre}
-                            voteAverage = {averageCount}
-                            voteCount = {seriesDetails.vote_count}
-                            trailer = {trailerUrl}
-                        />
-                    </div>
-            }
+        <div className={styles.seriesPageContainer}>
+            <Sidebar />
+            <SeriesPageBody
+                key = {seriesDetails.id}
+                coverImage = {`https://image.tmdb.org/t/p/original/${seriesDetails.backdrop_path}`}
+                title = {seriesDetails.name}
+                releaseDate = {seriesDetails.first_air_date}
+                runtime = {seriesDetails.episode_run_time}
+                overview = {seriesDetails.overview}
+                genre = {genre}
+                voteAverage = {averageCount}
+                voteCount = {seriesDetails.vote_count}
+                trailer = {trailerUrl}
+            />
         </div>
     )
 }

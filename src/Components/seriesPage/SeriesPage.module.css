@@ -20,7 +20,8 @@
     align-items: center;
     width: 15%;
     padding: 2rem 1rem;
-
+    position: absolute;
+    z-index: 100;
 }
 
 .logoText {
@@ -242,9 +243,8 @@ p.genre {
     }
 
     .logoContainer {
-        width: 93%;
-        max-width: 1000px;
-        margin: 0 auto;
+        width: 90%;
+        left: 1rem;
         padding: 1rem 0;
     }
 
