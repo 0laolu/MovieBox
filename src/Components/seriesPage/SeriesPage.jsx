@@ -8,6 +8,7 @@ export default function SeriesPage() {
     const [seriesDetails, setSeriesDetails] = useState("")
     const pathName = window.location.pathname
     const pathId = pathName.slice(11, )
+    const [trailerUrl, setTrailerUrl] = useState("")
     
 
     const [isLoading, setIsLoading] = useState(true)
@@ -27,12 +28,25 @@ export default function SeriesPage() {
             }
             };
             
-            fetch(`https://api.themoviedb.org/3/tv/${pathId}?language=en-US`, options)
+            fetch(`https://api.themoviedb.org/3/tv/${pathId}?&append_to_response=videos`, options)
             .then(response => response.json())
-            .then(data => setSeriesDetails(data))
+            .then(data => {setSeriesDetails(data); console.log(data)})
             .catch(err => console.error(err));
         
     }, [])
+
+    useEffect(() => {
+        // Use the effect to find and set the trailer URL
+        if (seriesDetails !== "") {
+          const trailer = seriesDetails.videos.results.find(video => {
+            return video.type === "Trailer" && video.site === "YouTube";
+          });
+    
+          if (trailer) {
+            setTrailerUrl(trailer.key);
+          }
+        }
+      }, [seriesDetails]);
 
     // const date = new Date(movieDetails.first_air_date)
     // const dateInUTC = date.toUTCString()
@@ -69,7 +83,7 @@ export default function SeriesPage() {
                             genre = {genre}
                             voteAverage = {averageCount}
                             voteCount = {seriesDetails.vote_count}
-                            // trailer = {trailerUrl}
+                            trailer = {trailerUrl}
                         />
                     </div>
             }
