@@ -104,10 +104,14 @@
     margin: 2rem 0;
 }
 
-.seriesThumbnail img {
+/* .seriesThumbnail img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    border-radius: 30px;
+} */
+
+.moviePlayer {
     border-radius: 30px;
 }
 
