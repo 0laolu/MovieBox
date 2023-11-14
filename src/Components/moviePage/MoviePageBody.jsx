@@ -12,14 +12,24 @@ export default function MoviePageBody(props) {
             <div className={styles.pageBodyContent}>
                 <figure className={styles.movieThumbnail}>
                     {/* <a href={`https://www.youtube.com/embed/${props.trailer}`} rel="noreferrer"> */}
-                        {/* <img src={props.coverImage} alt=""/> */}
-                        <ReactPlayer
-                            url={`https://www.youtube.com/watch?v=${props.trailer}`}
-                            width="100%"
-                            // height="auto"
-                            controls
-                            config={{ youtube: { playerVars: { modestbranding: 1 } } }}
-                        />
+                        {/*  */}
+                        {
+                            props.trailer ?
+                                (
+                                    <ReactPlayer
+                                        url={`https://www.youtube.com/watch?v=${props.trailer}`}
+                                        width="100%"
+                                        // height="auto"
+                                        controls
+                                        config={{ youtube: { playerVars: { modestbranding: 1 } } }}
+                                    />
+                                ) 
+                            :
+                                (
+                                    <img src={props.coverImage} alt=""/>
+                                )
+                        }
+                        
                     {/* </a> */}
                     
                     
