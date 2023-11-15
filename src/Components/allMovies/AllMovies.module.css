@@ -34,6 +34,11 @@
         padding: 1rem 0;
     }
 
+    .logoText {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
     .moviesContentSection {
         width: 100%;
         margin-bottom: 8rem;
