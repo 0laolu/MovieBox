@@ -1,3 +1,18 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    padding: 2rem 1rem;
+    position: absolute;
+    z-index: 100;
+}
+
+.logoText {
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
 .moviesContentSection {
     width: 80%;
     margin: 0 auto;
@@ -6,12 +21,19 @@
 
 
 .movieCardContainer {
+    padding-top: 4rem;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(5, 1fr);
 }
 
 @media screen and (max-width: 1120px) {
+    .logoContainer {
+        width: 90%;
+        left: 1rem;
+        padding: 1rem 0;
+    }
+
     .moviesContentSection {
         width: 100%;
         margin-bottom: 8rem;
