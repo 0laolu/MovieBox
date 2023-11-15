@@ -1,9 +1,12 @@
+
+
 .logoContainer {
+    background-color: white;
     display: flex;
     align-items: center;
-    width: 15%;
+    width: 100%;
     padding: 2rem 1rem;
-    position: absolute;
+    position: fixed;
     z-index: 100;
 }
 
@@ -29,9 +32,9 @@
 
 @media screen and (max-width: 1120px) {
     .logoContainer {
-        width: 90%;
-        left: 1rem;
-        padding: 1rem 0;
+        width: 100%;
+        /* left: 1rem; */
+        padding: 1rem 0 1rem 1rem;
     }
 
     .logoText {
