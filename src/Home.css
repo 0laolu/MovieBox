@@ -217,7 +217,7 @@ html {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 100;
+  z-index: 50;
   cursor: pointer;
 }
 

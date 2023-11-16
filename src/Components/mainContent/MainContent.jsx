@@ -21,7 +21,7 @@ export default function MainContent() {
             <div className="series-content-body">
             <div className="about">
                 <h2 className="about-header">Trending TV Shows </h2>
-                <p>See more <span>&gt;</span></p>
+                <p onClick={() => navigate(`/all-tv-series`)}>See more <span>&gt;</span></p>
             </div>
                 
                 <div className="series-card-container">
