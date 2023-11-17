@@ -35,7 +35,7 @@ export default function Sidebar() {
                         </figure>
                         <span>Movies</span>
                     </li>
-                    <li>
+                    <li onClick={()=> navigate(`/all-tv-series`)}>
                         <figure className={styles.linkContentLogo}>
                             <img src={tvSeriesIcon} alt="" />
                         </figure>
