@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import Loader from "../../Components/loader/Loader"
 import AllSeriesData from "../../Components/allSeries/AllSeriesData"
-import styles from "../../Components/allMovies/AllMovies.module.css"
+import styles from "../../Components/allSeries/AllSeries.module.css"
 import logoImage from "../../assets/hero-logo.png"
 
 export default function AllSeries() {
@@ -19,7 +19,7 @@ export default function AllSeries() {
                 isLoading ? 
                     <Loader />
                 :
-                    <section className={styles.moviesContentSection}>
+                    <section className={styles.seriesContentSection}>
                         <Link to="/">
                             <div className={styles.logoContainer}>
                                 <figure className={styles.logoImageWrapper}>
@@ -28,7 +28,7 @@ export default function AllSeries() {
                                 <h3 className={styles.logoText}>MovieBox</h3>
                             </div>
                         </Link>
-                        <div className={styles.movieCardContainer}>
+                        <div className={styles.seriesCardContainer}>
                             <AllSeriesData/>
                         </div>
                     </section>

@@ -14,10 +14,10 @@ export default function AllSeriesCard(props) {
     const [isFavorite, setIsFavorite] = useState(false)
 
     return (
-        <div className="movie-card" data-testid="movie-card">
+        <div className="series-card" data-testid="series-card">
             {/* the series and like button */}
-            <figure className="movie-card-image">
-                <img src={props.poster} alt="" data-testid="movie-poster"/>
+            <figure className="series-card-image">
+                <img src={props.poster} alt="" data-testid="series-poster"/>
                 <span className="favorite-btn">
                     <img onClick={() => setIsFavorite(prevFavorite => !prevFavorite)}  src={isFavorite ? favoriteRed : favorite} alt="" />
                 </span>
@@ -25,15 +25,15 @@ export default function AllSeriesCard(props) {
 
             <div  className="card-body">
                 {/* release date */}
-                <div className="movie-release-date">
-                    <p data-testid="movie-release-date"> {props.releaseDate} </p>
+                <div className="series-release-date">
+                    <p data-testid="series-release-date"> {props.releaseDate} </p>
                 </div>
 
-                {/* movie title */}
-                <h3 className="movie-title" data-testid="movie-title">{props.title}</h3>
+                {/* series title */}
+                <h3 className="series-title" data-testid="series-title">{props.title}</h3>
 
-                {/* movie rating */}
-                <div className="movie-rating">
+                {/* series rating */}
+                <div className="series-rating">
                     <div className="people-ratings">
                         <figure className="imdb-logo">
                             <img src={imbdLogo} alt="" />
@@ -48,8 +48,8 @@ export default function AllSeriesCard(props) {
                     </div>
                 </div>
 
-                {/* movie genre */}
-                <div className="movie-genre">
+                {/* series genre */}
+                <div className="series-genre">
                     {props.genre}
                 </div>
             </div>

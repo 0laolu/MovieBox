@@ -1,0 +1,115 @@
+
+
+.logoContainer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    position: fixed;
+    z-index: 100;
+}
+
+.logoText {
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.seriesContentSection {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+}
+
+
+.seriesCardContainer {
+    padding-top: 4rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 335px) {
+    .seriesCardContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 336px) and (max-width: 1120px) {
+    .logoContainer {
+        width: 100%;
+        /* left: 1rem; */
+        padding: 1rem 0 1rem 1rem;
+    }
+
+    .logoText {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .seriesContentSection {
+        width: 100%;
+        margin-bottom: 8rem;
+    }
+
+    .seriesCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .series-card {
+        margin-top: 5rem;
+        width: 93%;   /* made changes */
+        max-width: 250px;
+    }
+
+    .series-card-image {
+        position: relative;
+    }
+
+    .series-card-image img {  
+        cursor: pointer;
+        width: 100%;  /* made changes */
+        max-width: 250px;
+    }
+
+    .favorite-btn {   
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 50;
+        cursor: pointer;
+    }
+
+    .favorite-btn img {
+        max-width: 30px;
+    }
+
+    .card-body {
+        height: 175px;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1120px) {
+    .seriesCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+    .seriesCardContainer {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1121px) and (max-width: 1590px) {
+    .seriesContentSection {
+        width: 95%;
+        margin-bottom: 8rem;
+    }
+
+    .seriesCardContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
