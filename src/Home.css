@@ -316,7 +316,24 @@ html {
   color: #6B7280;
 }
 
-@media screen and (max-width: 1120px)  {
+@media screen and (max-width: 335px) {
+
+  .about-header {
+    font-size: 1.2rem;
+    max-width: 170px;
+  }
+
+  .about p {
+    font-size: 0.8rem;
+  }
+
+  .movie-card-container,
+  .series-card-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 336px) and (max-width: 1120px)  {
   .nav-bar {
     width: 95%;
   }
@@ -430,33 +447,32 @@ html {
   }
 
   .movie-card-image,
-.series-card-image {
-  position: relative;
-}
+  .series-card-image {
+    position: relative;
+  }
 
-.movie-card-image img,
-.series-card-image img {  
-  cursor: pointer;
-  /* max-width: 180px; */
-  width: 100%;  /* made changes */
-  max-width: 250px;
-}
+  .movie-card-image img,
+  .series-card-image img {  
+    cursor: pointer;
+    width: 100%;  /* made changes */
+    max-width: 250px;
+  }
 
-.favorite-btn {   
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 50;
-  cursor: pointer;
-}
+  .favorite-btn {   
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+    cursor: pointer;
+  }
 
-.favorite-btn img {
-  max-width: 30px;
-}
+  .favorite-btn img {
+    max-width: 30px;
+  }
 
-.card-body {
-  height: 175px;
-}
+  .card-body {
+    height: 175px;
+  }
 
   .about {
     width: 90%;
