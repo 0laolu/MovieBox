@@ -10,14 +10,14 @@ import { useNavigate } from "react-router-dom"
 
 
 export default function AllSeriesCard(props) {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const [isFavorite, setIsFavorite] = useState(false)
 
     return (
         <div className="series-card" data-testid="series-card">
             {/* the series and like button */}
             <figure className="series-card-image">
-                <img src={props.poster} alt="" data-testid="series-poster"/>
+                <img onClick={() => {navigate(`/tv-series/${props.id}`)}} src={props.poster} alt="" data-testid="series-poster"/>
                 <span className="favorite-btn">
                     <img onClick={() => setIsFavorite(prevFavorite => !prevFavorite)}  src={isFavorite ? favoriteRed : favorite} alt="" />
                 </span>
@@ -30,7 +30,7 @@ export default function AllSeriesCard(props) {
                 </div>
 
                 {/* series title */}
-                <h3 className="series-title" data-testid="series-title">{props.title}</h3>
+                <h3 onClick={() => {navigate(`/tv-series/${props.id}`)}} className="series-title" data-testid="series-title">{props.title}</h3>
 
                 {/* series rating */}
                 <div className="series-rating">
