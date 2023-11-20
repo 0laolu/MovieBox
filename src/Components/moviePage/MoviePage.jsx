@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ReactPlayer from 'react-player'
 import Sidebar from "./Sidebar";
 import MoviePageBody from "./MoviePageBody";
 import styles from "./MoviePage.module.css"
@@ -70,18 +69,6 @@ export default function MoviePage() {
                 voteCount = {movieDetails.vote_count}
                 trailer = {trailerUrl}
             />
-
-            {/* {trailerUrl && (
-                <iframe
-                width="100%"
-                height="auto"
-                src={`https://www.youtube.com/embed/${trailerUrl}?rel=0&showinfo=0`}
-                title="Trailer"
-                allowFullScreen
-                ></iframe>
-            )} */}
-
-            
         </div>
     )
 }
