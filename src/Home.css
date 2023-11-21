@@ -94,7 +94,9 @@ html {
   width: 100%;
   display: flex;
   animation: slide infinite;
-  animation-duration: 16s;
+  animation-duration: 30s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 .wrapper img {
@@ -116,75 +118,80 @@ html {
   }
 
   15% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 
   20% {
-    transform: translateX(-300%);
+    transform: translateX(-200%);
   }
 
   25% {
-    transform: translateX(-400%);
+    transform: translateX(-200%);
   }
 
   30% {
-    transform: translateX(-500%);
+    transform: translateX(-300%);
   }
 
   35% {
-    transform: translateX(-600%);
+    transform: translateX(-300%);
   }
 
   40% {
-    transform: translateX(-700%);
+    transform: translateX(-400%);
   }
 
   45% {
-    transform: translateX(-800%);
+    transform: translateX(-400%);
   }
 
   50% {
-    transform: translateX(-900%);
+    transform: translateX(-500%);
   }
 
   55% {
-    transform: translateX(-1000%);
+    transform: translateX(-500%);
   }
 
   60% {
-    transform: translateX(-1100%);
+    transform: translateX(-600%);
   }
 
   65% {
-    transform: translateX(-1200%);
+    transform: translateX(-600%);
   }
 
   70% {
-    transform: translateX(-1300%);
+    transform: translateX(-700%);
   }
 
   75% {
-    transform: translateX(-1400%);
+    transform: translateX(-700%);
   }
 
   80% {
-    transform: translateX(-1500%);
+    transform: translateX(-800%);
   }
 
   85% {
-    transform: translateX(-1600%);
+    transform: translateX(-800%);
   }
 
   90% {
-    transform: translateX(-1700%);
+    transform: translateX(-900%);
   }
 
   95% {
-    transform: translateX(-1800%);
+    transform: translateX(-900%);
+  }
+
+  97% {
+    transform: translateX(-1000%);
   }
 
   100% {
-    transform: translateX(-1900%);
+    
+    transform: translateX(0)
   }
 }
 
