@@ -4,22 +4,22 @@ import playButton from "../../assets/Play.png"
 import dashDesign from "../../assets/dash-design.png"
 
 
-export default function HeroBody() {
+export default function HeroBody(props) {
     return (
         <div className="hero-body">
             <div className="hero-content">
-                <h2 className="hero-content__header">John Wick 3 : Parabellum</h2>
+                <h2 className="hero-content__header">{props.title}</h2>
                 {/* content rating */}
                 <div className="hero-content__rating">
                     <div className="people-ratings">
                         <figure className="imdb-logo">
                             <img src={imbdLogo} alt="" />
                         </figure>
-                        <p>86.0 / 100</p>
+                        <p> {props.peopleRating} / 100</p>
                     </div>
                     <div className="tomato-rating">
                         <figure className="tomato-icon">
-                            <img src={tomatoIcon} alt="" />
+                            <img src={props.tomatoRating} alt="" />
                         </figure>
                         <p>97%</p>
                     </div>
@@ -27,7 +27,7 @@ export default function HeroBody() {
 
                 {/* content description */}
                 <div className="hero-content__description">
-                    <p>John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
+                    <p> {props.description} </p>
                 </div>
 
                 {/* movie trailer button */}

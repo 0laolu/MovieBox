@@ -23,9 +23,26 @@ export default function Hero() {
             
     }, [])
 
+    console.log(movieImages)
+
     const image = movieImages.map(movieImage => {
+
+        const voteRating = movieImage.vote_average
+        const rating = Math.round((voteRating / 10) * 100)
+        
+        const tomatoRate = Math.floor(Math.random() * 26) + 75
+
+
         return (
-            <img src={`https://image.tmdb.org/t/p/original/${movieImage.backdrop_path}`} alt="" />
+            <>
+                <HeroBody
+                    title= {movieImage.title}
+                    peopleRating = {rating}
+                    tomatoRating = {tomatoRate}
+                    description = {movieImage.overview}
+                />
+                <img src={`https://image.tmdb.org/t/p/original/${movieImage.backdrop_path}`} alt="" />
+            </>
         )
         // console.log(movieImage)
         // https://image.tmdb.org/t/p/original/${movieData.poster_path}
@@ -33,13 +50,14 @@ export default function Hero() {
 
     return (
         <section className="hero-section">
+            
+            <HeroHeader />
             <div className="image-container">
                 <figure className="wrapper">
                     {image}
                 </figure>
             </div>
-            <HeroHeader />
-            <HeroBody />
+            {/* <HeroBody /> */}
         </section>
     )
 }
