@@ -15,13 +15,21 @@ html {
   font-size: 16px;
 }
 
+.header {
+  position: relative;
+}
+
 .nav-bar {
   width: 80%;
   padding: 1.5rem 0;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .logo-container {
@@ -81,13 +89,14 @@ html {
 
 /* Hero Section */
 .hero-section {
-  /* background-image: url("./assets/hero-bg.png"); */
-  /* background-size: cover; */
   margin-bottom: 5rem;
+  position: relative;
 }
 
 .image-container {
   overflow: hidden;
+  width: 100%;
+  z-index: -100;
 }
 
 .wrapper {
@@ -97,11 +106,12 @@ html {
   animation-duration: 30s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
+  z-index: -100;
 }
 
 .wrapper img {
-  width: 100%;
-  /* height: 50vh; */
+  max-width: 100%;
+  z-index: -100;
 }
 
 @keyframes slide {
@@ -197,32 +207,39 @@ html {
 
 .hero-body {
   display: flex;
-  width: 80%;
+  width: 100%;
   padding: 5rem 0 12rem 0;
-  margin: 0 auto;
   position: relative;
-  border: 1px solid red;
+  z-index: 100;
 }
 
 .hero-content {
   color: white;
-  width: 100%;
-  position: absolute;
+  width: 400px;
   z-index: 100;
+  left: 5rem;
+  top: 10rem;
+  position: absolute;
 }
 
 .hero-content h2 {
+  display: block;
+  width: 100%;
   font-size: 3rem;
+  z-index: 100;
+  position: relative;
 }
 
 .hero-content__rating {
   display: flex;
   padding: 1.5rem 0;
+  z-index: 100;
 }
 
 .people-ratings,
 .tomato-rating {
   display: flex;
+  /* width: 100%; */
 }
 
 .tomato-rating {
@@ -235,9 +252,10 @@ html {
 }
 
 .hero-content__description {
-  width: 80%;
+  width: 100%;
   line-height: 1.5;
   padding-bottom: 2rem;
+  z-index: 100;
 }
 
 .hero-content__description p {
@@ -263,6 +281,10 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.trailer-btn-content img {
+  z-index: 100;
 }
 
 .trailer-btn-content span {

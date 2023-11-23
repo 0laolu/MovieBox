@@ -19,9 +19,9 @@ export default function HeroBody(props) {
                     </div>
                     <div className="tomato-rating">
                         <figure className="tomato-icon">
-                            <img src={props.tomatoRating} alt="" />
+                            <img src={tomatoIcon} alt="" />
                         </figure>
-                        <p>97%</p>
+                        <p> {props.tomatoRating}% </p>
                     </div>
                 </div>
 
