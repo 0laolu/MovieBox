@@ -39,6 +39,7 @@ export default function Hero() {
                     description = {movieImage.overview}
                 />
                 <img src={`https://image.tmdb.org/t/p/original/${movieImage.backdrop_path}`} alt="" />
+                <div className="overlay"></div>
             </>
         )
     })
@@ -50,6 +51,7 @@ export default function Hero() {
             <div className="image-container">
                 <figure className="wrapper">
                     {image}
+                    {/* <div className="overlay"></div> */}
                 </figure>
             </div>
             
