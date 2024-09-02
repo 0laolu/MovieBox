@@ -5,6 +5,8 @@ import HeroBody from "./HeroBody"
 export default function Hero() {
 
     const [movieImages, setMovieImages] = useState([])
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentSlideContent, setCurrentSlideContent] = useState(0)
 
     useEffect(() => {
         const options = {
@@ -19,42 +21,57 @@ export default function Hero() {
             .then(response => response.json())
             .then(data => setMovieImages(data.results))
             .catch(err => console.error(err));
-
-            
     }, [])
 
-    console.log(movieImages)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide(prev => (prev + 1) % movieImages.length);
+        }, 8200); // Adjust timing as needed for slide change
+        return () => clearInterval(interval);
+    }, [movieImages.length])
 
-    const image = movieImages.map((movieImage) => {
+    const currentMovie = movieImages[currentSlide]
 
-        // const voteRating = movieImage.vote_average
+    const percent = `${currentSlide * -100}%`
 
 
-        return (
-            <>
-                <HeroBody
-                    title = {movieImage.title}
-                    peopleRating = {Math.round((movieImage.vote_average / 10) * 100)}
-                    tomatoRating = {Math.floor(Math.random() * 26) + 75}
-                    description = {movieImage.overview}
-                />
-                <img src={`https://image.tmdb.org/t/p/original/${movieImage.backdrop_path}`} alt="" />
-                <div className="overlay"></div>
-            </>
-        )
-    })
-
+    
     return (
         <section className="hero-section">
-            
             <HeroHeader />
             <div className="image-container">
-                <figure className="wrapper">
-                    {image}
-                    {/* <div className="overlay"></div> */}
+                <figure 
+                    className="wrapper" 
+                    style={{
+                        transform: `translateX(${percent})`,
+                        transition: "all 0.7s ease-in-out"
+                    }}
+                >
+                    {movieImages.map((movieImage, index) => (
+                        <div 
+                            key={movieImage.id}
+                            className="slide"
+                        >
+                            <img 
+                                src={`https://image.tmdb.org/t/p/original/${movieImage.backdrop_path}`} 
+                                alt={movieImage.title}
+                            />
+                            <div className="overlay"></div>
+                        </div>
+                    ))}
                 </figure>
+
+                
+
+                {movieImages[currentSlide] && (
+                    <HeroBody 
+                        title={movieImages[currentSlide].title}
+                        peopleRating={Math.round((movieImages[currentSlide].vote_average / 10) * 100)}
+                        tomatoRating={Math.floor(Math.random() * 26) + 75}
+                        description={movieImages[currentSlide].overview}
+                    />
+                )}
             </div>
-            
         </section>
     )
 }
