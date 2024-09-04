@@ -74,6 +74,8 @@ export default function MoviesList() {
                 tomatoRating = {tomatoRate}
                 genre = {genre}
             />
+
+            
         )
     })
 

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import imbdLogo from "../../assets/imdb-logo.png"
 import tomatoIcon from "../../assets/tomato-icon.png"
 import playButton from "../../assets/Play.png"
@@ -5,6 +6,9 @@ import dashDesign from "../../assets/dash-design.png"
 
 
 export default function HeroBody(props) {
+
+    const navigate = useNavigate()
+
     return (
         <div className="hero-body">
             <div className="hero-content">
@@ -35,7 +39,7 @@ export default function HeroBody(props) {
                     <button className="trailer-btn">
                         <div className="trailer-btn-content">
                             <img src={playButton} alt="" />
-                            <span>WATCH TRAILER</span>
+                            <span onClick={() => {navigate(`/movies/${props.id}`)}}>WATCH TRAILER</span>
                         </div>
                     </button>
                 </div>

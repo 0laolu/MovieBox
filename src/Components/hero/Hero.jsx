@@ -6,7 +6,8 @@ export default function Hero() {
 
     const [movieImages, setMovieImages] = useState([])
     const [currentSlide, setCurrentSlide] = useState(0)
-    const [currentSlideContent, setCurrentSlideContent] = useState(0)
+    
+
 
     useEffect(() => {
         const options = {
@@ -34,7 +35,6 @@ export default function Hero() {
 
     const percent = `${currentSlide * -100}%`
 
-
     
     return (
         <section className="hero-section">
@@ -48,6 +48,7 @@ export default function Hero() {
                     }}
                 >
                     {movieImages.map((movieImage, index) => (
+                        
                         <div 
                             key={movieImage.id}
                             className="slide"
@@ -64,12 +65,16 @@ export default function Hero() {
                 
 
                 {movieImages[currentSlide] && (
+                    <>
+                        
                     <HeroBody 
+                        id={movieImages[currentSlide].id}
                         title={movieImages[currentSlide].title}
                         peopleRating={Math.round((movieImages[currentSlide].vote_average / 10) * 100)}
                         tomatoRating={Math.floor(Math.random() * 26) + 75}
                         description={movieImages[currentSlide].overview}
                     />
+                    </>
                 )}
             </div>
         </section>
